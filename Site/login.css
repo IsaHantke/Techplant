@@ -1,0 +1,377 @@
+body {
+    margin: 0;
+    font-family: monospace;
+}
+
+/* COMEÇO DA HEADER */
+
+.header {
+    width: 100%;
+    height: 100px;
+    background-color: #497320;
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid #ffffff;
+}
+
+.container {
+    width: 85%;
+    display: flex;
+   
+ }
+
+ .div_logobranca {
+     width: 80px;
+     height: 70px;
+     margin-left: 10px;
+   
+ }
+
+ .div_logobranca .img1 {
+     width: 100%;
+     height: 100%;
+ }
+
+ .titulo {
+    color: white;
+    margin-left: 10px;
+    font-family: monospace;
+   
+    
+}
+
+ .header .container {
+     justify-content: center;
+     align-items: center ;
+     height: 100%;
+ }
+
+ .navbar {
+     color: white;
+     list-style: none;
+     width: 1100px;
+     height: 50px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     font-family: monospace;
+     font-size: 15px;
+     
+ 
+}
+
+.navbar li {
+     margin-right: 40px;
+     font-weight: bold;
+    
+}
+
+.navbar .login {
+    margin-left: 50px;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.login {
+    width: 60px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    border: 3px solid white;
+    border-radius: 8px;
+    
+}
+
+.reflogin {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar .cadastro {
+    display: flex;
+    align-items: center;
+}
+
+.cadastro {
+    width: 60px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 3px solid white;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.refcadastro {
+    color: white;
+    text-decoration: none;
+}
+
+.refhome {
+    color: white;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 15px;
+}
+
+.refprojeto {
+    color: white;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 15px;
+}
+
+.refsobrenos {
+    color: white;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 15px;
+}
+
+.refcontato {
+    color: white;
+    text-decoration: none;
+    font-family: monospace;
+    font-size: 15px;
+}
+
+.refsimulador {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Fim da header */
+
+.loginbody {
+    background-color: #497320;
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginbanner {
+    width: 80%;
+    height: 600px;
+    background-color: #ffffff;
+    display: flex;
+    border-radius: 20px;
+}
+
+.bannerimg {
+    width: 50%;
+    height: 598px;
+}
+
+.imglogin1 {
+    width: 100%;
+    height: 600px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.partelogin {
+    width: 50%;
+    background-color: #ffffff;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.logologin {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    margin-left: 60px;
+}
+
+.pretalogo {
+    width: 80px;
+    height: 70px;
+}
+
+.logintext {
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 15px;
+    font-family: 'Trebuchet MS';
+}
+
+.fazerlogin {
+    margin-top: 50px;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+}
+
+.textemail {
+    padding-left: 25px;
+    font-family: monospace;
+    font-weight: bold;
+    color: #8d8c8e;
+    font-size: 18px;
+}
+
+::-webkit-input-placeholder {
+    color: #8d8c8e;
+    font-size: 15px;
+    
+}
+
+.inputemail {
+    margin-left: 25px;
+    width: 500px;
+    height: 32px;
+    background-color: #c1c1c1;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.textsenha {
+    padding-left: 25px;
+    font-family: monospace;
+    font-weight: bold;
+    color: #8d8c8e;
+    font-size: 18px;
+}
+
+.inputsenha {
+    margin-left: 25px;
+    width: 500px;
+    height: 32px;
+    background-color: #c1c1c1;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.debaixo {
+    width: 100%;
+    height: 50px;
+    display: flex;
+}
+
+.debaixo1 {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.lembrar {
+    color: #8d8c8e;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.debaixo2 {
+    margin-left: 30px;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.esqueci {
+    margin-left: 40px;
+    color: #6985eb;
+    font-size: 15px;
+}
+
+.debaixo3 {
+    margin-top: 10px;
+    height: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.enviar {
+    color: white;
+    background-color: #3576e5;
+    height: 40px;
+    width: 350px;
+}
+
+.debaixo4 {
+    margin-top: 30px;
+    width: 100%;
+    height:50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.conta {
+    width: 190px;
+    height: 100%;
+    margin-left: 45px;
+}
+
+.refcadastrologin {
+    text-decoration: none;
+    color: #6985eb;
+}
+
+.rodape {
+    background-color: black;
+    width: 100%;
+    height: 120px;
+    display: flex;
+}
+
+.rodape1 {
+    width: 40%;
+    height: 120px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rodape2 {
+    width: 17%;
+    height: 120px;
+    margin-left: 50px;
+}
+
+.imgrodape {
+   width: 100%;
+   height: 120px;
+}
+
+.rodape3 {
+    color: white;
+    width: 20%;
+    height: 120px;
+    margin-left: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.rodape4 {
+    color: white;
+    width: 20%;
+    height: 120px;
+    margin-left: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

@@ -1,0 +1,505 @@
+body {
+    margin: 0;
+    font-family: monospace;
+}
+
+/* COMEÇO DA HEADER */
+
+.header {
+  position: fixed; /* Esse elemento, deixa a div fixa na tela, mas */
+  top: 0;          /* ele vai comer a parte debaixo, para concertar cheque a div espacamento */
+  right: 0;
+    width: 100%;
+    height: 100px;
+    background-color: #497320f4;
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid #ffffff;
+}
+
+.espacamento {     /* coloquei essa div para a header fixa não "comer" a debaixo, assim criando uma div "fantasma" */
+    width: 100%;   /* que empurra a debaixo, fazendo ficar certinho, outra opção era colocar margintop na div debaixo */           
+    height: 100px;
+    background-color: #497320;
+}
+
+.container {
+    width: 85%;
+    display: flex;
+   
+ }
+
+ .div_logobranca {
+     width: 80px;
+     height: 70px;
+     margin-left: 10px;
+   
+ }
+
+ .div_logobranca .img1 {
+     width: 100%;
+     height: 100%;
+ }
+
+ .titulo {
+    color: white;
+    margin-left: 10px;
+    font-family: monospace;
+   
+    
+}
+
+ .header .container {
+     justify-content: center;
+     align-items: center ;
+     height: 100%;
+ }
+
+ .navbar {
+     color: white;
+     list-style: none;
+     width: 1100px;
+     height: 50px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     font-family: monospace;
+     font-size: 15px;
+     
+ 
+}
+
+.navbar li {
+     margin-right: 40px;
+     font-weight: bold;
+    
+}
+
+.navbar .login {
+    margin-left: 50px;
+    margin-right: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.login {
+    width: 60px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    border: 3px solid white;
+    border-radius: 8px;
+    
+}
+
+.reflogin {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar .cadastro {
+    display: flex;
+    align-items: center;
+}
+
+.cadastro {
+    width: 60px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: 3px solid white;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.refcadastro {
+    color: white;
+    text-decoration: none;
+}
+
+.homesimulador {
+    color: white;
+    text-decoration: none;
+}
+
+/* COMEÇO DO BODY */
+
+
+.divtudo{
+    background-color:#3e5916;
+    width: 100%;
+    height: 2000px;
+    
+   
+}
+
+.divtudo .divprimeira {
+  background: #497320;
+  width: 100%;
+  height: 600px;
+  display: flex;
+}
+
+/* DIV FAZENDA */
+
+.fazenda {
+    width: 700px;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.fazendinha {
+    width: 700px;
+    height: 700px;
+    
+}
+
+/* FIM DIV FAZENDA */
+
+/* DIV do texto do lado da fazenda */
+
+.divtexto1 {
+    width: 700px;
+    height: 500px;
+    margin-right: 100px;
+}
+
+.paragrafomaior {
+    color: white;
+    font-weight: bold;
+    font-size: 50px;
+    margin-left: 100px;
+
+}
+
+.paragrafomenor {
+    color: white;
+    font-size: 20px;
+    margin-left: 100px;
+    font-family: 'Trebuchet MS';
+}
+
+
+.divconfira {
+    color: #497320;
+    width: 170px;
+    height: 60px;
+    background-color: white;
+    font-weight: bold;
+    font-size: 25px;
+    margin-left: 100px;
+    border: 2px solid white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.deco2 {
+    padding-left: 9px;
+}
+
+/* Começo do ardcane */
+
+.divtudo2 {
+    width: 100%;
+    height: 650px;
+    display:flex;
+}
+
+.back1 {
+    background-color: #3e5916;
+    width: 50%;
+    height: 650px;
+    display: flex;
+}
+
+.back2 {
+    background-color: #c8d98b ;
+    width: 43%;
+    height: 650px;
+}
+
+/* Banner Ardcane */
+.Ardcane {
+    background-color: white;
+    width: 70%;
+    height: 600px;
+    
+}
+.Ardcane .bu {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+}
+
+
+
+.text {
+    color: #3e5916;
+    font-size: 50px;
+    font-family: 'Trebuchet MS';
+    font-weight: bold;
+}
+
+.ardcanizinho {
+    width: 100%;
+    height: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Trebuchet MS';
+    font-size: 20px;
+    margin-top: 50px;
+    color: #8dac3c;
+}
+
+.plantinha {
+    width: 100% ;
+    height: 100px;
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.planta {
+    width: 100px;
+    height: 100px;
+}
+
+/* Img fazendeiro*/
+.back1 .imgfazendeiro {
+    padding-left: 160px;
+    width: 80%;
+    height: 600px;
+}
+
+
+/* Fim do arcane */
+
+
+/* Quem Somos*/
+.divtudo3 {
+    width: 100%;
+    height: 500px;
+    display: flex;
+}
+
+.quemsomos {
+    width: 50%;
+    height: 500px;
+    background-color: #c8d98b;
+}
+
+.logogrande {
+    width: 50%;
+    height: 500px;
+}
+
+.logao {
+    width: 100%;
+    height: 500px;
+}
+
+.somos {
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 50px;
+    font-family: 'Trebuchet MS';
+    padding-left: 50px;
+    padding-top: 30px;
+}
+
+.lorem {
+     color: #ffffff;
+     font-size: 20px;
+     padding-left: 55px;
+     padding-top: 30px;
+}
+
+/* parte do Contato */
+
+.contato {
+    width: 100%;
+    height: 750px;
+    background-color: #497320;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.bannercontato {
+    background-color: white;
+    width: 60%;
+    height: 650px;
+    margin-left: 300px;
+    border-radius: 20px;
+    display: flex;
+}
+
+.verde {
+    background-color: #88a61c;
+    width: 50%;
+    height: 648px;
+    border-left: 2px solid #88a61c;
+    border-bottom: 2px solid #88a61c ;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.nome {
+    color: black;
+    margin-bottom: 40px;
+    border:  2px solid black;
+    border-radius: 10px;
+    width: 350px;
+    height: 40px;
+}
+.email {
+    color: black;
+    margin-bottom: 40px;
+    border:  2px solid black;
+    border-radius: 10px;
+    width: 350px;
+    height: 40px;
+}
+
+.numero {
+    color: black;
+    margin-bottom: 40px;
+    border:  2px solid black;
+    border-radius: 10px;
+    width: 350px;
+    height: 40px;
+}
+.mensagem {
+    color: black;
+    margin-bottom: 40px;
+    border:  2px solid black;
+    border-radius: 10px;
+    width: 350px;
+    height: 100px;
+}
+
+::-webkit-input-placeholder {
+    color: black;
+    font-size: 20px;
+}
+
+.btnenviar {
+    color: white;
+    background-color: #3e5916;
+    height: 40px;
+    width: 150px;
+}
+
+.preta {
+    width: 110px;
+    height: 100px;
+    margin-bottom: 40px;
+}
+
+.branca {
+    background-color:white;
+    width: 50%;
+    height: 648px;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white ;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.brancatexto1 {
+    
+    font-family: 'Trebuchet MS';
+    font-size: 60px;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+
+.brancatexto2 {
+    font-size: 20px;
+    margin-left: 50px;
+    margin-top: 30px;
+}
+
+.imgcontato {
+    margin-top: 20px;
+    width: 450px;
+    height: 300px;
+}
+
+
+
+/* rodapé */
+
+.rodape {
+    background-color: black;
+    width: 100%;
+    height: 120px;
+    display: flex;
+}
+
+.rodape1 {
+    width: 40%;
+    height: 120px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rodape2 {
+    width: 17%;
+    height: 120px;
+    margin-left: 50px;
+}
+
+.imgrodape {
+   width: 100%;
+   height: 120px;
+}
+
+.rodape3 {
+    color: white;
+    width: 20%;
+    height: 120px;
+    margin-left: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.rodape4 {
+    color: white;
+    width: 20%;
+    height: 120px;
+    margin-left: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Fim do rodape*/
+
+
+
+
