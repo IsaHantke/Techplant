@@ -3,6 +3,7 @@ body {
     font-family: monospace;
 }
 
+html{ scroll-behavior: smooth;}
 /* COMEÇO DA HEADER */
 
 .header {
@@ -130,8 +131,7 @@ body {
 
 .divtudo{
     background-color:#3e5916;
-    width: 100%;
-    height: 2000px;
+    width: 100vw;
     
    
 }
@@ -152,6 +152,11 @@ body {
     align-items: center;
     justify-content: center;
     
+}
+
+.ardcaneref {
+    color: white;
+    text-decoration: none;
 }
 
 .fazendinha {
@@ -175,6 +180,7 @@ body {
     font-weight: bold;
     font-size: 50px;
     margin-left: 100px;
+    padding-top: 15px;
 
 }
 
@@ -183,6 +189,7 @@ body {
     font-size: 20px;
     margin-left: 100px;
     font-family: 'Trebuchet MS';
+    padding-top: 30px;
 }
 
 
@@ -199,7 +206,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .deco2 {
@@ -441,7 +448,7 @@ body {
 
 .imgcontato {
     margin-top: 20px;
-    width: 450px;
+    width: 100%;
     height: 300px;
 }
 
