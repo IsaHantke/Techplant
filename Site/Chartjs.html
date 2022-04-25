@@ -6,8 +6,18 @@
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='Chartjs.css'>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+    <script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
+    <script src="http://www.chartjs.org/samples/latest/utils.js"></script>
     <script src='main.js'></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        canvas {
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+        }
+    </style>
+
     <link rel="stylesheet" href="Chartjs.css">
 
 </head>
@@ -150,7 +160,7 @@
                   yAxes: [{
                       scaleLabel: {
                           display: true,
-                          labelString: 'Luminosidade'
+                          labelString: 'Temperatura'
                       },
                       ticks: {
                           beginAtZero: true

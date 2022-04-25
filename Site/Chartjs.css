@@ -122,14 +122,15 @@ color: #497320;
 }
 
 .sensor1 {
-
+     
     color: #d10a0a;
     margin-left: 125px;
 }
 
 .grafico {
-    width: 35vw;
-    margin-left: 50px;
+ 
+    width: 50vw;
+    margin-left: 5px;
 }
 
 .sensor2 {
@@ -139,7 +140,7 @@ color: #497320;
 }
 
 .grafico2{
-
-    width: 35vw;
-    margin-left: 50px;
+ 
+    width: 50vw;
+    margin-left: 5px;
 }
