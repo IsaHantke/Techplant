@@ -1,6 +1,7 @@
 body {
     margin: 0;
     overflow-x: hidden;
+  
 }
 
 .header {
@@ -120,3 +121,25 @@ color: #497320;
     align-items: center;
 }
 
+.sensor1 {
+
+    color: #d10a0a;
+    margin-left: 125px;
+}
+
+.grafico {
+    width: 35vw;
+    margin-left: 50px;
+}
+
+.sensor2 {
+
+    color:#5858ec;
+    margin-left: 125px;
+}
+
+.grafico2{
+
+    width: 35vw;
+    margin-left: 50px;
+}
