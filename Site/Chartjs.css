@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    overflow-x: hidden;
 }
 
 .header {
@@ -67,13 +68,16 @@ body {
 .divtudo {
     width: 100vw;
     height: 80vh;
-    background-color: #205273;
+    background-color: white;
+    display: flex;
+    border-left: 50px solid #497320;
+
 }
 
 .primeiratudo {
     width: 100vw;
     height: 85vh;
-    display: flex;
+    display: flex;   
     justify-content: center;
     align-items: center;
     background-color: #ffffff;
@@ -82,7 +86,7 @@ body {
 .fazenda1 {
     width: 50vw;
     height: 85vh;
-    border: solid #497320 4px ;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -100,7 +104,7 @@ color: #497320;
 .grafs {
     width: 48vw;
     height: 50vh;
-    border: 2px solid black;
+    
     display: flex;
     align-items: center;
     justify-content: center;
@@ -112,7 +116,6 @@ color: #497320;
 .fazenda2 {
     width: 50vw;
     height: 85vh;
-    border: solid #497320 4px ;
     display: flex;
     flex-direction: column;
     justify-content: center;

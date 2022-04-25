@@ -1,79 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='Chartjs.css'>
-    <script src='main.js'></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChartJs</title>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <link rel="stylesheet" href="Chartjs.css">
+    <link rel="stylesheet" href="teste.css">
 
 </head>
-<body>
-
-  
-
-    <div class="header"> 
-        
-    <div class="div_logobranca"> <img class="img1" src="logo-branca.png"> </div>
-       
-    <h1 class="titulo"> TechPlant </h1>
-
-    <div class="container"> 
-
-        
-          <li class="usuario"> Olá, usuário</li>
-    </ul>
-
-    </div>
-    </div>
-    <!-- Termino header-->
-
-    <div class="divtudo">
-        
+<body style="display: flex;">
     
-     <div class="primeiratudo"> 
-        
-        <div class="fazenda1">
-           <h1 class="text1"> Fazenda 1 - <span class="textinho"> Lote 1</span></h1>
-           
-           <div class="grafs">   
-               
-             <div class="graf1">
-                <canvas id="myChart" style= "height:40vh; width:30vw"></canvas>
-            </div>
-             </div>
-
-             <div class="graf2"> </div>
-        </div>
-
-        </div>
-
-
-        <div class="fazenda2">
-            <h1 class="text1"> Fazenda 2 - <span class="textinho"> Lote 1</span></h1>
-           
-            <div class="grafs">
-                
-              <div class="graf1">
-                <canvas id="myChart2" style="height:40vh; width:30vw"></canvas>
-              </div>
-              <div class="graf2"></div>
-         </div>
-        </div>
-
-
-
-     </div>
-
-
-
+    <div >
+        <canvas id="myChart" style="position: relative; height:40vh; width:30vw"></canvas>
     </div>
-</body>
-</html>
+      
+    <div>
+        <canvas id="myChart2" style="position: relative; height:40vh; width:30vw"></canvas>
+    </div>
 
+</body>
 <script>
     const labels= [
       '12:00',
@@ -163,6 +110,3 @@
   
     
 </html>
-
-
-
