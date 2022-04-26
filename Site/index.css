@@ -1,15 +1,14 @@
 body {
     margin: 0;
     font-family: monospace;
+    overflow-x: hidden;
 }
 
+/* fazer ele rolar para baixo devagar*/ 
 html{ scroll-behavior: smooth;}
 /* COMEÇO DA HEADER */
 
 .header {
-  position: fixed; /* Esse elemento, deixa a div fixa na tela, mas */
-  top: 0;          /* ele vai comer a parte debaixo, para concertar cheque a div espacamento */
-  right: 0;
     width: 100%;
     height: 100px;
     background-color: #497320f4;
@@ -95,6 +94,16 @@ html{ scroll-behavior: smooth;}
 }
 
 .reflogin {
+    color: white;
+    text-decoration: none;
+}
+
+.refcontato {
+    color: white;
+    text-decoration: none;
+}
+
+.refsobrenos {
     color: white;
     text-decoration: none;
 }
@@ -304,7 +313,7 @@ html{ scroll-behavior: smooth;}
     display: flex;
 }
 
-.quemsomos {
+#quemsomos {
     width: 50%;
     height: 500px;
     background-color: #c8d98b;
@@ -338,7 +347,7 @@ html{ scroll-behavior: smooth;}
 
 /* parte do Contato */
 
-.contato {
+#contato2 {
     width: 100%;
     height: 750px;
     background-color: #497320;
@@ -506,7 +515,6 @@ html{ scroll-behavior: smooth;}
 }
 
 /* Fim do rodape*/
-
 
 
 
