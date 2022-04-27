@@ -55,15 +55,15 @@
 
                 <img src="logo-preta.png" class="pretalogo">
 
-            <span class="logintext"> TechPlant </span> 
+            <span class="logintext"> TechPlant </span>         <div id="div_resultado"></div>
             </div>
 
             <div class="fazerlogin"> 
 
                 <p class="textemail"> Email: </p>
-                <input class="inputemail" type="email" placeholder="Example@gmail.com">
+                <input class="inputemail" id="in_email" type="email" placeholder="Example@gmail.com">
                 <p class="textsenha"> Senha: </p>
-                <input class="inputsenha" type="password" placeholder="Inserir Senha">
+                <input class="inputsenha" id="in_senha" type="password" placeholder="Inserir Senha">
 
             </div>
 
@@ -82,7 +82,7 @@
 
 
             <div class="debaixo3">
-                <button class="enviar"> Login </button>
+                <button class="enviar"  onclick="login()"> Login </button>
             </div>
 
             <div class="debaixo4"> 
@@ -141,4 +141,37 @@
 </div>
 
 </body>
-</html>
+</html> 
+
+<script>
+
+    function login(){
+
+        var email = in_email.value
+        var senha = in_senha.value 
+      
+   
+        if (email == "" || senha == "") {  
+        
+            div_resultado.style.display = "block" 
+        div_resultado.innerHTML = (`Para prosseguir prencher  todos os campos!`)  
+       
+        return false
+    } 
+ 
+    
+      if (email.indexOf("@") == -1 || email.indexOf(".com") == -1) {
+    
+    div_resultado.style.display = "block" 
+    div_resultado.innerHTML = (`E-mail inválido! Verifique e tente novamente.`)                                         
+    
+    return false
+}   
+
+
+
+
+
+
+    } 
+</script>

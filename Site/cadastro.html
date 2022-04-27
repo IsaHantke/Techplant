@@ -51,29 +51,33 @@
 
                     <img src="logo-preta.png" class="cadastrologo">
     
-                <span class="cadastrotext"> TechPlant </span> 
+                <span class="cadastrotext"> TechPlant </span>
+
+                                                             <div id="div_resultado"> 
+                                                                                 </div>
+
                 </div>
 
                 <div class="cadastrotudo">
                     
                     <div class="partido1">
                        
-                        <span class="nome1"> Nome Inteiro </span>
-                        <input class="inputnome" placeholder="Nome Inteiro">
+                        <span class="nome1"> Nome Completo </span>
+                        <input class="inputnome" id="nome_completo" placeholder="Nome Completo">
                         <span class="telefone"> Número de telefone </span> 
-                        <input class="numero1" placeholder="(00) 00000-0000">
+                        <input class="numero1" id="numero_telef" placeholder="(00) 00000-0000">
                         <span class="senha2"> Senha </span>
-                        <input class="cadsenha" placeholder="Inserir Senha" type="password">
+                        <input class="cadsenha" id="in_senha" placeholder="Inserir Senha" type="password">
                     </div>
 
                     <div class="partido2">
                        
                         <span class="nome1"> Empresa </span>
-                        <input class="inputnome" placeholder="Empresa">  <!-- Este campo não é obrigatório-->
+                        <input class="inputnome" id="nome_empresa" placeholder="Empresa">  <!-- Este campo não é obrigatório-->
                         <span class="telefone"> E-mail </span> 
-                        <input class="numero1" placeholder="Example@gmail.com">
+                        <input class="numero1" id="in_email" placeholder="Example@gmail.com">
                         <span class="senha2"> Confirmar Senha </span>
-                        <input class="cadsenha" placeholder="Inserir Senha" type="password">
+                        <input class="cadsenha" id="confirmar_senha" placeholder="Inserir Senha" type="password">
                     </div>
 
                 </div>
@@ -98,7 +102,7 @@
                     <div class="parte2">
 
                          
-                    <button class="criar"> Criar conta</button>
+                    <button class="criar" onclick="criar()"> Criar conta</button>
                     </div>
 
                 </div>
@@ -154,3 +158,47 @@
 
     </body>
 </html>
+
+
+<script>
+    
+    function  criar(){
+    var nome = nome_completo.value
+    var telef = numero_telef.value
+    var senha = in_senha.value
+    var empresa = nome_empresa.value 
+    var email = in_email.value
+    var confirmar = confirmar_senha.value 
+      
+
+ if (nome == "" || telef == "" || senha == "" || empresa == "" || email == "" || confirmar == "") {
+     
+    div_resultado.style.display = "block" 
+    div_resultado.innerHTML = (`Para prosseguir prencher  todos os campos!`) 
+    
+     return false
+ } else {
+    div_resultado.style.display = "block" 
+        div_resultado.innerHTML = (`Cadastro realizado com sucesso. Bem-vindo`)
+ }
+
+    if (email.indexOf("@") == -1 || email.indexOf(".com") == -1) {
+    
+    div_resultado.style.display = "block" 
+    div_resultado.innerHTML = (`E-mail inválido! Verifique e tente novamente.`)                                         
+    
+    return false
+}   
+ 
+   if (senha != confirmar) {
+
+    div_resultado.style.display = "block" 
+    div_resultado.innerHTML = (`As senhas devem ser iguais para prosseguir!`)
+
+   } 
+ 
+
+ }   
+    
+
+</script>

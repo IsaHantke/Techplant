@@ -312,6 +312,21 @@ body {
     color: #3576e5;
 }
 
+/* Formulário erro */
+
+#div_resultado{
+    
+    display: none;
+    width: 176px;
+    color: black;
+    margin-left: 61px;
+    border: #ff0000b8 solid 3px;
+    font-size: 15px;
+    padding-left: 12px;
+    padding-top: 5px;
+    padding-bottom: 4px;
+     
+}
 
 
 
