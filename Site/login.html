@@ -24,8 +24,8 @@
              <li> <a class="refhome" href="index.html"> Home </a></li>  
 
              <li> <a class="refprojeto" href="index.html"> Projeto </a> </li>
-             <li> <a class="refsobrenos" href="index.html">Sobre Nós </a> </li> &nbsp;
-             <li> <a class="refsimulador" href="SimuladorFinanceiro.html"> Simulador&nbsp;Financeiro </a> </li>
+             <li> <a class="refsobrenos" href="index.html">Sobre Nós </a> </li> 
+             <li> <a class="refsimulador" href="SimuladorFinanceiro.html"> Simulador Financeiro </a> </li>
              <li> <a class="refcontato" href="index.html"> Contato </a> </li>
             
              <div class="login"> <li> Login  </li> </div>  &nbsp;
@@ -149,6 +149,13 @@
 
         var email = in_email.value
         var senha = in_senha.value 
+
+
+      /*  if ( email == "techpant@sptech.school" || senha == "urubu10") {  
+
+            window.location.href = 'file:///C:/Users/Aluno/AppData/Documents/Techplant/Site/Chartjs.html'
+ 
+        }   */
       
    
         if (email == "" || senha == "") {  
@@ -166,7 +173,23 @@
     div_resultado.innerHTML = (`E-mail inválido! Verifique e tente novamente.`)                                         
     
     return false
-}   
+}      
+  
+    if ( email == "techpant@sptech.school.com" || senha == "urubu10") {  
+
+window.location.href = 'file:///C:/Users/Aluno/AppData/Documents/Techplant/Site/Chartjs.html'
+ 
+}  else {
+
+    div_resultado.style.display = "block"
+    div_resultado.innerHTML= (`E-mail ou senha inválido. Verifique e tente novamente.`)
+}
+
+
+
+
+
+
 
 
 

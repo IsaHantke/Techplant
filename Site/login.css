@@ -56,6 +56,7 @@ body {
      align-items: center;
      font-family: monospace;
      font-size: 15px;
+     margin-left: 190px;
      
  
 }
@@ -67,7 +68,6 @@ body {
 }
 
 .navbar .login {
-    margin-left: 50px;
     margin-right: 5px;
     display: flex;
     align-items: center;
@@ -90,6 +90,7 @@ body {
 }
 
 .navbar .cadastro {
+    
     display: flex;
     align-items: center;
 }
@@ -104,6 +105,7 @@ body {
     border: 3px solid white;
     border-radius: 8px;
     text-decoration: none;
+    margin-right: 18px;
 }
 
 .refcadastro {
