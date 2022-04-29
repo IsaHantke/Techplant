@@ -85,7 +85,6 @@ body {
 .fazenda1 {
     width: 50vw;
     height: 85vh;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -125,11 +124,12 @@ color: #497320;
      
     color: #d10a0a;
     margin-left: 125px;
+    padding-top: 35px;
 }
 
 .grafico {
  
-    width: 50vw;
+    width: 48vw;
     margin-left: 5px;
 }
 
@@ -141,6 +141,6 @@ color: #497320;
 
 .grafico2{
  
-    width: 50vw;
+    width: 48vw;
     margin-left: 5px;
 }
