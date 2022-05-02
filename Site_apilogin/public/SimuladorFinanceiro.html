@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title> Simulador Financeiro </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/simulador.css'>
+    <script src='main.js'></script>
+    <script src="./js/funcoes.js"></script>
+</head>
+<body>
+    
+       <!-- Início Header-->
+       <div class="header"> 
+        
+        <div class="div_logobranca"> <img class="img1" src="assets/imgs/logo-branca.png"> </div>
+           
+        <h1 class="titulo"> TechPlant </h1>
+
+        <div class="container"> 
+
+            
+       
+            <ul class="navbar">
+             <li> <a class="refhome" href="index.html"> Home </a></li>  
+
+             <li> <a class="refprojeto" href="index.html"> Projeto </a> </li>
+             <li> <a class="refsobrenos" href="index.html">Sobre Nós </a> </li>
+             <li> Simulador Financeiro </li>
+             <li> <a class="refcontato" href="index.html"> Contato </a> </li>
+            
+             <div class="login"> <li> <a href="login.html" class="reflogin"> Login </a> </li> </div> 
+             
+             <div class="cadastro"> <li> <a class="refcadastro" href="cadastro.html"> Cadastro </a> </li> </div>
+        </ul>
+        
+        </div>
+    </div>
+
+    <!-- Fim da Header-->
+    <div class="espacamento"> </div>
+    <div class="loginbody">
+
+        <div class="loginbanner">
+
+           <div class="bannerimg">
+               <img class="imglogin1" src="assets/imgs/imglogin1.png">
+           </div>
+          
+
+           <div class="partelogin">
+             
+            <div class="logologin">
+
+                <img src="assets/imgs/logo-preta.png" class="pretalogo">
+
+            <span class="logintext"> TechPlant </span> 
+            </div>
+
+            <div class="fazerlogin"> 
+
+                <p class="textemail"> Quantidade de hectáres (ha): </p>
+                <input class="inputemail" type="text" id="i_tamanho" placeholder="Qtd. ha">
+                <p class="textsenha"> Porcentagem de perda por safra (%): </p>
+                <input class="inputsenha" type="text" id="i_perda" placeholder="%">
+                <p class="textsenha"> Preço da safra por hectares (R$): </p>
+                <input class="inputsenha" type="text" id="i_preco" placeholder="R$">
+            </div>
+
+            <div class="debaixo">
+
+
+                
+            </div>
+
+
+
+            <div class="debaixo3">
+                <button onclick="calcular()" class="enviar"> Ganho com o nosso produto </button>
+            </div>
+
+            <div class="debaixo4"> 
+                
+                <div class="dentrodebaixo4">
+
+                      
+                <div class="conta">
+                    <div id="div_resultado"></div> 
+                </div>
+
+
+                </div>
+
+
+            </div>
+
+           </div>
+
+        </div>
+     
+
+
+    </div>
+
+    <div class="rodape"> 
+              
+        <div class="rodape1">
+
+           Rua Imirim, nº35 Vila Guilherme | São Paulo | SP | CEP 02467-965 <br> <br>
+           TechPlant SA | CNP Mande um email J: 83.864.853.0001-17 <br> <br>
+           Copyright© 2020 - 2022 TechPlant Company S.L. Todos direitos reservados. 
+
+        </div>
+
+        <div class="rodape2">
+            <img class="imgrodape" src="assets/imgs/rodape1.png">
+        </div>
+
+       <div class="rodape3">
+           <b> Atalhos</b> <br> <br>
+           Projeto <br> <br>
+           Contato <br>
+
+       </div>
+ 
+
+       <div class="rodape4">
+          <b>Dúvidas</b> <br> <br>
+          Mande um email <br> <br>
+          Quem Somos
+       </div>
+
+</div>
+
+
+</body>
+</html>
+
+<script>
+    /*
+    function  calcular() {
+    div_resultado.innerHTML = `Com o nosso produto você <b style="color: blue;">deixa de perder:</b> <b style="color: green;">
+    R$ ${(Number ((i_perca.value/100) *i_tamanho.value) * i_preco.value).toFixed (2)}  </b>
+    reais com a sua safra, ainda não levando em conta a isenção de impostos que será somada à esse valor
+    <br>
+    <b style="color: green;"> Venha ja fazer uma cotação para a sua plantação <b>
+        <br>
+        <button>Fazer cotação</button>   
+    `
+    */
+    
+    
+    function calcular(){
+    
+        var perda = (Number ((i_perda.value/100) *i_tamanho.value) * i_preco.value)
+        var economia = Number(perda) -  Number (perda * 0.3)
+        var perdaAtual = Number(perda) -  Number (perda * 0.7)
+    
+        div_resultado.innerHTML = ` &nbsp; &nbsp;  Sua porcentagem de perda por hectáre é ${i_perda.value}%, o que resulta em uma perda de <br> &nbsp; &nbsp; <b style="color: red;">R$ ${perda.toFixed(2)}</b>  a cada safra! <br> <br>
+        &nbsp; &nbsp; Com o nosso produto, sua perda irá reduzir de ${i_perda.value}% para <b>${Number(i_perda.value) * Number(0.3)}%</b>! Desta forma, &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  totalizando <b style="color: rgb(0, 190, 0);">R$ ${perdaAtual.toFixed(2)}</b> de perda por safra, então você <b><u>economizará</u></b> <b style="color: rgb(0, 190, 0);">R$ ${economia.toFixed(2)}</b>!`
+    }
+    
+    </script>
