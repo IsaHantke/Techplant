@@ -89,10 +89,11 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 200px;
 }
 
 .text1 {
-    color: green; 
+    color: red; 
 }
 
 .textinho {
@@ -109,9 +110,18 @@ body {
 
 /*Começo da kpi*/ 
 
+.critico{ 
+
+    color: red;
+    margin-top: 50px;
+}
+
+
+
 
 .sensor1 {
      
+    margin-top: 50px ;
     color: #d10a0a;
     margin-left: 125px;
     padding-top: 35px;
@@ -124,6 +134,7 @@ body {
 }
 
 .sensor2 {
+    margin-top: 20px;   
     color:#5858ec;
     margin-left: 125px;
 }
