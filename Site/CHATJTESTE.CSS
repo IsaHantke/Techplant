@@ -70,30 +70,28 @@ body {
     width: 100vw;
     height: 80vh;
     background-color: white;
+}
+  
+.fazenda2 {
+    width: 50vw;
+    height: 75vh;
     display: flex;
+    align-items: center; 
+    border: 3px solid black;   
 }
 
-.primeiratudo {
-    width: 100vw;
-    height: 85vh;
-    display: flex;   
-    justify-content: center;
-    align-items: center;
-    background-color: #ffffff;
-}
 
 .fazenda1 {
     width: 50vw;
     height: 75vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-top: 200px;
+    align-items: center; 
+    border: 3px solid black;   
 }
 
 .text1 {
-    color: red; 
+    color: green; 
+    
 }
 
 .textinho {
@@ -104,33 +102,22 @@ body {
     width: 48vw;
     height: 30vh;
     display: flex;
-    align-items: center;
-    justify-content: center;
+  margin-left: 50px;
 }
-
-/*Começo da kpi*/ 
-
-.critico{ 
-
-    color: red;
-    margin-top: 50px;
-}
-
-
-
 
 .sensor1 {
      
-    margin-top: 50px ;
+    margin-bottom: -70px;
     color: #d10a0a;
-    margin-left: 125px;
-    padding-top: 35px;
+    margin-left: 90px;
+    padding-top: 94px;
 }
 
 .grafico {
      
     width: 48vw;
-    margin-left: 5px;
+    margin-top: 80px; 
+    margin-left: 10px; 
 }
 
 .sensor2 {
@@ -143,4 +130,171 @@ body {
  
     width: 48vw;
     margin-left: 5px;
+}  
+
+
+.metrica_umid{
+
+       width: 80%;
+       height: 18vh;
+       display: flex;
+       padding-top: 5px;
+       align-items: center;
+       border-radius: 8px;
+       
+        
 }
+ 
+
+
+
+.critico_umid {
+    width: 8vw;
+    height: 12vh;
+    background-color: rgba(247, 0, 0, 0.938);
+    border: 3px black solid;
+    border-radius: 8px;
+    color: black;
+    font-size: 20px;
+    font-weight: 700; 
+    margin-left: 30px;
+    text-align: center;
+    padding-top: 5px;
+    
+}
+
+#umid_critico{  
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+
+}  
+
+
+
+.metricas{
+
+    width: 80%;
+    height: 18vh;
+    display: flex;
+    padding-top: 5px;
+    align-items: center;
+    border-radius: 8px;
+    
+     
+}
+
+
+
+
+.critico {
+    width: 8vw;
+    height: 12vh;
+    background-color: rgba(247, 0, 0, 0.938);
+    border: 3px black solid;
+    border-radius: 8px;
+    color: black;
+    font-size: 20px;
+    font-weight: 700; 
+    margin-left: 30px;
+    text-align: center;
+    padding-top: 5px;
+    
+}
+
+#temp_critico{  
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+
+}  
+
+.alerta {
+    width: 8vw;
+    height: 12vh;
+    background-color: yellow;
+    border: 3px black solid;
+    border-radius: 8px;
+    color: black;
+    font-size: 20px;
+    font-weight: 700; 
+    margin-left: 30px;
+    text-align: center;
+    padding-top: 8px;
+    
+}
+
+#temp_alerta{  
+    color: white;
+    font-weight: 500;
+    font-size: 22px;
+
+}  
+
+
+
+.ideal {
+    width: 8vw;
+    height: 12vh;
+    background-color:green;
+    border: 3px black solid;
+    border-radius: 8px;
+    color: black;
+    font-size: 20px;
+    font-weight: 700; 
+    margin-left: 30px;
+    text-align: center;
+    padding-top: 8px;
+    
+}
+
+#temp_ideal{  
+    color: white;
+    font-weight: 500;
+    font-size: 22px;
+
+}  
+
+.alerta2 {
+    width: 8vw;
+    height: 12vh;
+   background-color: rgb(255, 255, 0, 0.712);
+    border: 3px black solid;
+    border-radius: 8px;
+    color: black;
+    font-size: 20px;
+    font-weight: 700; 
+    margin-left: 30px;
+    text-align: center;
+    padding-top: 5px;
+    
+}
+
+#temp_alerta2{  
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+
+}  
+
+.critico2 {
+    width: 8vw;
+    height: 12vh;
+    background-color: rgba(247, 0, 0, 0.938);
+    border: 3px black solid;
+    border-radius: 8px;
+    color: black;
+    font-size: 20px;
+    font-weight: 700; 
+    margin-left: 30px;
+    text-align: center;
+    padding-top: 5px;
+    
+}
+
+#temp_critico2{  
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+
+}  
