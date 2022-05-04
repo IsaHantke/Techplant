@@ -60,11 +60,11 @@
             <div class="fazerlogin"> 
 
                 <p class="textemail"> Quantidade de hectáres (ha): </p>
-                <input class="inputemail" type="text" id="i_tamanho" placeholder="Qtd. ha">
+                <input class="inputemail" type="number" id="i_tamanho" placeholder="Qtd. ha">
                 <p class="textsenha"> Porcentagem de perda por safra (%): </p>
-                <input class="inputsenha" type="text" id="i_perda" placeholder="%">
+                <input class="inputsenha" type="number" id="i_perda" placeholder="%">
                 <p class="textsenha"> Preço da safra por hectares (R$): </p>
-                <input class="inputsenha" type="text" id="i_preco" placeholder="R$">
+                <input class="inputsenha" type="number" id="i_preco" placeholder="R$">
             </div>
 
             <div class="debaixo">
@@ -137,17 +137,7 @@
 </html>
 
 <script>
-    /*
-    function  calcular() {
-    div_resultado.innerHTML = `Com o nosso produto você <b style="color: blue;">deixa de perder:</b> <b style="color: green;">
-    R$ ${(Number ((i_perca.value/100) *i_tamanho.value) * i_preco.value).toFixed (2)}  </b>
-    reais com a sua safra, ainda não levando em conta a isenção de impostos que será somada à esse valor
-    <br>
-    <b style="color: green;"> Venha ja fazer uma cotação para a sua plantação <b>
-        <br>
-        <button>Fazer cotação</button>   
-    `
-    */
+      
     
     
     function calcular(){
@@ -155,7 +145,9 @@
         var perda = (Number ((i_perda.value/100) *i_tamanho.value) * i_preco.value)
         var economia = Number(perda) -  Number (perda * 0.3)
         var perdaAtual = Number(perda) -  Number (perda * 0.7)
-    
+         
+        div_erro.style.display = "none"
+        div_resultado.style.display = "block"
         div_resultado.innerHTML = ` &nbsp; &nbsp;  Sua porcentagem de perda por hectáre é ${i_perda.value}%, o que resulta em uma perda de <br> &nbsp; &nbsp; <b style="color: red;">R$ ${perda.toFixed(2)}</b>  a cada safra! <br> <br>
         &nbsp; &nbsp; Com o nosso produto, sua perda irá reduzir de ${i_perda.value}% para <b>${Number(i_perda.value) * Number(0.3)}%</b>! Desta forma, &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  totalizando <b style="color: rgb(0, 190, 0);">R$ ${perdaAtual.toFixed(2)}</b> de perda por safra, então você <b><u>economizará</u></b> <b style="color: rgb(0, 190, 0);">R$ ${economia.toFixed(2)}</b>!`
    
@@ -166,15 +158,13 @@
 
         if (hectare == "" || porcentagem == "" || preco == "") {  
         
+        div_resultado.style.display = "none"
         div_erro.style.display = "block" 
         div_erro.innerHTML = (`Para prosseguir prencher  todos os campos!`)  
    
     return false
 } 
-    
-    
-}
-        
+     
 
-
+    }
     </script>

@@ -1,0 +1,532 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+  
+}
+
+.header {
+    width: 100vw;
+    height: 14vh;
+    background-color: #497320;
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid #497320;
+}
+
+.container {
+    width: 85vw;
+    display: flex;
+  
+ }
+
+ .div_logobranca {
+    width: 6vw;
+    height: 11vh;
+    margin-left: 10px;
+  
+}
+
+.div_logobranca .img1 {
+    width: 100%;
+    height: 100%;
+}
+
+.titulo {
+   color: white;
+   margin-left: 10px;
+   font-family: monospace;
+  
+   
+}
+
+.header .container {
+    justify-content: center;
+    align-items: center ;
+    height: 10vh;
+}
+
+.navbar {
+    color: white;
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+    font-family: monospace;
+
+}
+
+.usuario {
+    color: #ffffff;
+    list-style: none;
+    font-size: xx-large;
+    padding-left: 23vh;
+    padding-right: 25vw;
+}  
+
+.ulsair{
+justify-content: space-between;
+list-style: none;
+
+}
+.sair{
+     
+    color: white;
+    font-size: 20px;
+    font-weight: 200;
+    text-decoration: white;
+
+}
+
+/* Termino header */
+
+.divtudo {
+    width: 100vw;
+    height: 80vh;
+    background-color: white;
+    display: flex;
+}
+  
+.fazenda2 {
+    width: 50vw;
+    height: 75vh;
+    display: flex;
+    align-items: center; 
+    flex-direction: column;
+}
+
+
+.fazenda1 {
+    width: 50vw;
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.text1 {
+    color: green; 
+    
+}
+
+.textinho {
+    font-size: 20px;
+}
+
+.grafs {
+    width: 48vw;
+    height: 30vh;
+    display: flex;
+  margin-left: 50px;
+}
+
+.sensor1 {
+     
+    margin-bottom: -70px;
+    color: #d10a0a;
+    margin-left: 90px;
+    padding-top: 94px;
+}
+
+.grafico {
+     
+    width: 48vw;
+    margin-top: 80px; 
+    margin-left: 10px; 
+}
+
+.sensor2 {
+    margin-top: 20px;   
+    color:#5858ec;
+    margin-left: 125px;
+}
+
+.grafico2{
+ 
+    width: 48vw;
+    margin-left: 5px;
+}  
+  
+.metrica_umid{
+      
+    width: 85%;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    margin-right:100px; 
+    font-family: sans-serif;
+    
+} 
+
+
+
+
+.critico_umid {
+ width: 10vw;
+ height: 12vh;
+ background-color: rgba(247, 0, 0, 0.938);
+ border: 3px black solid;
+ border-radius: 8px;
+ color: black;
+ font-size: 20px;
+ font-weight: 700; 
+ margin-left: 30px;
+ text-align: center;
+ padding-top: 5px;
+ 
+}
+
+#umid_critico{  
+ color: white;
+ font-size: 22px;
+ font-weight: 500;
+
+}  
+
+.alerta_umid {
+ width: 10vw;
+ height: 12vh;
+ background-color:yellow;
+ border: 3px black solid;
+ border-radius: 8px;
+ color: black;
+ font-size: 20px;
+ font-weight: 700; 
+ margin-left: 30px;
+ text-align: center;
+ padding-top: 5px;
+ 
+}
+
+#umid_alerta{  
+ color: white;
+ font-size: 22px;
+ font-weight: 500;
+
+}
+
+.ideal_umid {
+ width: 10vw;
+ height: 12vh;
+ background-color:green;
+ border: 3px black solid;
+ border-radius: 8px;
+ color: black;
+ font-size: 20px;
+ font-weight: 700; 
+ margin-left: 30px;
+ text-align: center;
+ padding-top: 5px;
+ 
+}
+
+#umid_ideal{  
+ color: white;
+ font-size: 22px;
+ font-weight: 500;
+
+}  
+
+.alerta2_umid {
+ width: 10vw;
+ height: 12vh;
+ background-color:yellow;
+ border: 3px black solid;
+ border-radius: 8px;
+ color: black;
+ font-size: 20px;
+ font-weight: 700; 
+ margin-left: 30px;
+ text-align: center;
+ padding-top: 5px;
+ 
+}
+
+#umid_alerta2{  
+ color: white;
+ font-size: 22px;
+ font-weight: 500;
+
+}  
+
+
+
+.critico2_umid {
+ width: 10vw;
+ height: 12vh;
+ background-color:red;
+ border: 3px black solid;
+ border-radius: 8px;
+ color: black;
+ font-size: 20px;
+ font-weight: 700; 
+ margin-left: 30px;
+ text-align: center;
+ padding-top: 5px;
+ 
+}
+
+#umid_critico2{  
+ color: white;
+ font-size: 22px;
+ font-weight: 500;
+
+}  
+
+
+.metricas{
+
+ width: 80%;
+ height: 18vh;
+ display: flex;
+ padding-top: 5px;
+ align-items: center;
+ border-radius: 8px;
+ 
+  
+}
+
+
+
+
+.critico {
+ width: 8vw;
+ height: 12vh;
+ background-color: rgba(247, 0, 0, 0.938);
+ border: 3px black solid;
+ border-radius: 8px;
+ color: black;
+ font-size: 20px;
+ font-weight: 700; 
+ margin-left: 30px;
+ text-align: center;
+ padding-top: 5px;
+ 
+}
+
+#temp_critico{  
+ color: white;
+ font-size: 22px;
+ font-weight: 500;
+
+}  
+
+.alerta {
+ width: 8vw;
+ height: 12vh;
+ background-color: yellow;
+ border: 3px black solid;
+ border-radius: 8px;
+ color: black;
+ font-size: 20px;
+ font-weight: 700; 
+ margin-left: 30px;
+ text-align: center;
+ padding-top: 8px;
+ 
+}
+
+#temp_alerta{  
+ color: white;
+ font-weight: 500;
+ font-size: 22px;
+
+}  
+
+
+
+.ideal {
+ width: 8vw;
+ height: 12vh;
+ background-color:green;
+ border: 3px black solid;
+ border-radius: 8px;
+ color: black;
+ font-size: 20px;
+ font-weight: 700; 
+ margin-left: 30px;
+ text-align: center;
+ padding-top: 8px;
+ 
+}
+
+#temp_ideal{  
+ color: white;
+ font-weight: 500;
+ font-size: 22px;
+
+}  
+
+.alerta2 {
+ width: 8vw;
+ height: 12vh;
+background-color: rgb(255, 255, 0, 0.712);
+ border: 3px black solid;
+ border-radius: 8px;
+ color: black;
+ font-size: 20px;
+ font-weight: 700; 
+ margin-left: 30px;
+ text-align: center;
+ padding-top: 5px;
+ 
+}
+
+#temp_alerta2{  
+ color: white;
+ font-size: 22px;
+ font-weight: 500;
+
+}  
+
+.critico2 {
+ width: 8vw;
+ height: 12vh;
+ background-color: rgba(247, 0, 0, 0.938);
+ border: 3px black solid;
+ border-radius: 8px;
+ color: black;
+ font-size: 20px;
+ font-weight: 700; 
+ margin-left: 30px;
+ text-align: center;
+ padding-top: 5px;
+ 
+}
+
+#temp_critico2{  
+ color: white;
+ font-size: 22px;
+ font-weight: 500;
+
+}  
+
+
+
+.metrica_umid{
+      
+       width: 85%;
+       height: 20vh;
+       display: flex;
+       align-items: center;
+       border-radius: 8px;
+       margin-right:100px; 
+       font-family: sans-serif;
+       
+} 
+ 
+
+
+
+.critico_umid {
+    width: 10vw;
+    height: 12vh;
+    background-color: rgba(247, 0, 0, 0.938);
+    border: 3px black solid;
+    border-radius: 8px;
+    color: black;
+    font-size: 20px;
+    font-weight: 700; 
+    margin-left: 30px;
+    text-align: center;
+    padding-top: 5px;
+    
+}
+
+#umid_critico{  
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+
+}  
+
+.alerta_umid {
+    width: 10vw;
+    height: 12vh;
+    background-color:yellow;
+    border: 3px black solid;
+    border-radius: 8px;
+    color: black;
+    font-size: 20px;
+    font-weight: 700; 
+    margin-left: 30px;
+    text-align: center;
+    padding-top: 5px;
+    
+}
+
+#umid_alerta{  
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+
+}
+
+.ideal_umid {
+    width: 10vw;
+    height: 12vh;
+    background-color:green;
+    border: 3px black solid;
+    border-radius: 8px;
+    color: black;
+    font-size: 20px;
+    font-weight: 700; 
+    margin-left: 30px;
+    text-align: center;
+    padding-top: 5px;
+    
+}
+
+#umid_ideal{  
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+
+}  
+
+.alerta2_umid {
+    width: 10vw;
+    height: 12vh;
+    background-color:yellow;
+    border: 3px black solid;
+    border-radius: 8px;
+    color: black;
+    font-size: 20px;
+    font-weight: 700; 
+    margin-left: 30px;
+    text-align: center;
+    padding-top: 5px;
+    
+}
+
+#umid_alerta2{  
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+
+}  
+
+ 
+
+.critico2_umid {
+    width: 10vw;
+    height: 12vh;
+    background-color:red;
+    border: 3px black solid;
+    border-radius: 8px;
+    color: black;
+    font-size: 20px;
+    font-weight: 700; 
+    margin-left: 30px;
+    text-align: center;
+    padding-top: 5px;
+    
+}
+
+#umid_critico2{  
+    color: white;
+    font-size: 22px;
+    font-weight: 500;
+
+}  
+
+

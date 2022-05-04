@@ -1,11 +1,11 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>DashBoard - TechPlant</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='Chartjs.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='dashboard.css'>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
     <script src="http://www.chartjs.org/samples/latest/utils.js"></script>
@@ -18,12 +18,9 @@
         }
     </style>
 
-    <link rel="stylesheet" href="Chartjs.css">
 
 </head>
 <body>
-
-      
 
 
     <div class="header"> 
@@ -34,57 +31,73 @@
 
     <div class="container"> 
 
-        
-          <li class="usuario"> Olá, usuário!</li>
-    </ul>
+          
+          <li class="usuario"> Olá, usuário!</li> 
+
+            <div class="ulsair">
+           <li ><a class="sair" href="login.html">Sair</a></li>
+            </div>
 
     </div>
     </div>
     <!-- Termino header-->
 
     <div class="divtudo">
-    
+             
         
-     <div class="primeiratudo"> 
         
+        <div class="fazenda1">                   
 
-    
+       <div class="metrica_umid"> 
+        <div class="critico_umid">Critico<p id="umid_critico">79%</p></div>
+        <div class="alerta_umid">Alerta<p id="umid_alerta">80.25%</p></div>
+        <div class="ideal_umid">Ideal<p id="umid_ideal">82.5%</p></div>
+        <div class="alerta2_umid">Alerta<p id="umid_alerta2">84.75%</p></div>
+        <div class="critico2_umid">Critico <p id="umid_critico2">86%</p></div>
+       </div>
 
-        <div class="fazenda1">   
-            
            <h1 class="text1"> Fazenda Tech - <span class="textinho"> Lote 1:</span></h1>
-           
-           <div class="grafs">   
+                 
                
-             <div class="graf1">
+             <div class="graf1">  
+
+                <div>
                <h3 class="sensor2">Sensor DHT 11 - Umidade</h3>
               <section class="grafico2">
                 <canvas id="dht11Umidade"></canvas>
             </section>
+            
+                </div>
 
             </div>
-             </div>
-
-
-             </div>
-             
-             
-
-             <div class="fazenda2">
-                <h1 class="text1"> <span class="textinho"> </span></h1>
+             </div>   
                
+             
+             
+                     
+               <div class="fazenda2"> 
+
+
                 <div class="grafs">
+                <div class="temperatura">     
                     
-                  <div class="graf1">
-                    <h3 class="sensor1">Sensor DHT 11 - Temperatura</h3>
+                    <div class="metricas">  
+                        <div class="critico">Critico<p id="temp_critico">22°C</p></div>
+                        <div class="alerta">Alerta<p id="temp_alerta">23.5°C</p></div>
+                        <div class="ideal">Ideal<p id="temp_ideal">26°C</p></div>
+                        <div class="alerta2">Alerta<p id="temp_alerta2">26°C</p></div>                        
+                        <div class="critico2">Critico<p id="temp_critico2">26°C</p></div>
+                    </div>
+                 <h3 class="sensor1">Sensor DHT 11 - Temperatura</h3> <div>
                     <section class="grafico">
                         <canvas id="dht11Temperatura"></canvas>
                     </section>
-                  </div>
-                  <div class="graf2"></div>
+                  </div>  
 
-            </div>
-    
+                   </div>
+             </div>
+            
+               </div>
     
     
          </div>
@@ -98,7 +111,6 @@
 
 
 
-    </div>
 </body>
 </html>
 
