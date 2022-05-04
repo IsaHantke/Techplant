@@ -193,8 +193,8 @@ body {
     display: flex;
     align-items: center;
     margin-top: 30px;
-    margin-left: 60px;
-}
+    margin-left: 10px;
+} 
 
 .pretalogo {
     width: 80px;
@@ -319,7 +319,24 @@ body {
     justify-content: center;
     align-items: center;
     
+}      
+
+#div_erro{    
+    display: none;
+    width: 176px;
+    color: black;
+    margin-left: 61px;
+    border: #ff0000b8 solid 3px;
+    font-size: 15px;
+    padding-left: 12px;
+    padding-top: 5px;
+    padding-bottom: 4px;
+     
 }
+ 
+
+
+
 
 
 .rodape {
