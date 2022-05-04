@@ -152,12 +152,6 @@
         var senhaVar = in_senha.value 
 
 
-      /*  if ( email == "techpant@sptech.school" || senha == "urubu10") {  
-
-            window.location.href = 'file:///C:/Users/Aluno/AppData/Documents/Techplant/Site/Chartjs.html'
- 
-        }   */
-      
    
         if (emailVar == "" || senhaVar == "") {  
         
@@ -204,7 +198,7 @@
                     sessionStorage.ID_USUARIO = json.id;
 
                     setTimeout(function () {
-                        window.location = "./dashboard/dashboard.html";
+                        window.location.href= "dashboard/dashboard.html"
                     }, 1000); // apenas para exibir o loading
 
                 });
@@ -227,7 +221,7 @@
     }
 
     function sumirMensagem() {
-        cardErro.style.display = "none"
+        div_resultado.style.display = "none"
     }
 
 

@@ -3,12 +3,16 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Cadastro - Techplant</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <title>Cadastro - Techplant</title>
+
+    
     <link rel='stylesheet' type='text/css' media='screen' href='css/cadastro.css'>
     <script src='main.js'></script>
     <script src="./js/funcoes.js"></script>
 </head>
+
 <body>
       <!-- Início Header-->
     <div class="header"> 
@@ -196,6 +200,8 @@
     div_resultado.style.display = "block" 
     div_resultado.innerHTML = (`As senhas devem ser iguais para prosseguir!`)
 
+    return false
+
    } 
  // Enviando o valor da nova input
  fetch("/usuarios/cadastrar", {
@@ -222,10 +228,10 @@
 
                 setTimeout(() => {
                     window.location = "login.html";
-                }, "2000")
-                 return false                 
+                }, "1000")                
                 limparFormulario();
                 finalizarAguardar();
+                return false 
             } else {
                 throw ("Houve um erro ao tentar realizar o cadastro!");
             }
