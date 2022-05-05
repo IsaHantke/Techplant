@@ -156,11 +156,20 @@
         if (emailVar == "" || senhaVar == "") {  
         
             div_resultado.style.display = "block" 
-        div_resultado.innerHTML = (`Para prosseguir prencher  todos os campos!`)  
+        div_resultado.innerHTML = (`Para prosseguir preencher  todos os campos!`)  
        
         return false
-    } 
- 
+    }      
+              
+
+    if (emailVar != senhaVar)  { 
+
+        div_resultado.style.display = "block" 
+        div_resultado.innerHTML = (`E-mail ou senha inválido. Verifique e tente novamente!`)  
+       
+      
+    }
+    
     
       if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
     
@@ -169,8 +178,8 @@
     
     return false
 }      
-
-
+       
+                                                    
         console.log("FORM LOGIN: ", emailVar);
         console.log("FORM SENHA: ", senhaVar);
 
@@ -198,7 +207,7 @@
                     sessionStorage.ID_USUARIO = json.id;
 
                     setTimeout(function () {
-                        window.location.href= "dashboard/dashboard.html"
+                        window.location = "../dashboard/dashboard.html"
                     }, 1000); // apenas para exibir o loading
 
                 });

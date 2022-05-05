@@ -55,7 +55,7 @@
 
                 <img src="assets/imgs/logo-preta.png" class="pretalogo">
 
-            <span class="logintext"> TechPlant </span> 
+            <span class="logintext"> TechPlant </span>    <div id="div_erro"></div>
             </div>
 
             <div class="fazerlogin"> 
@@ -156,9 +156,28 @@
         var perda = (Number ((i_perda.value/100) *i_tamanho.value) * i_preco.value)
         var economia = Number(perda) -  Number (perda * 0.3)
         var perdaAtual = Number(perda) -  Number (perda * 0.7)
-    
+         
+        div_erro.style.display = "none"
+        div_resultado.style.display = "block"
         div_resultado.innerHTML = ` &nbsp; &nbsp;  Sua porcentagem de perda por hectáre é ${i_perda.value}%, o que resulta em uma perda de <br> &nbsp; &nbsp; <b style="color: red;">R$ ${perda.toFixed(2)}</b>  a cada safra! <br> <br>
         &nbsp; &nbsp; Com o nosso produto, sua perda irá reduzir de ${i_perda.value}% para <b>${Number(i_perda.value) * Number(0.3)}%</b>! Desta forma, &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  totalizando <b style="color: rgb(0, 190, 0);">R$ ${perdaAtual.toFixed(2)}</b> de perda por safra, então você <b><u>economizará</u></b> <b style="color: rgb(0, 190, 0);">R$ ${economia.toFixed(2)}</b>!`
+     
+           
+        
+        var hectare = i_tamanho.value;
+          var porcentagem = i_perda.value.value;
+          var preco = i_preco.value;
+
+        if (hectare == "" || porcentagem == "" || preco == "") {  
+        
+        div_resultado.style.display = "none"
+        div_erro.style.display = "block" 
+        div_erro.innerHTML = (`Para prosseguir prencher  todos os campos!`)  
+   
+    return false
+} 
+    
+       
     }
     
     </script>
