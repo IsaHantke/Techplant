@@ -55,49 +55,6 @@ CREATE TABLE medida (
 	umidade DOUBLE,
 	momento DATETIME,
 	fk_aquario INT
-);  
-
-reate database techplant;
-use techplant;
-
-
-create table login1 (
-idLogin int primary key IDENTITY(1,1),
-nome varchar (40),
-email varchar (40),
-senha varchar (40),
-confirmar varchar (40),
-empresa varchar(40),
-tel char (15),
-fkEmpresa INT FOREIGN KEY REFERENCES empresa (idEmpresa)
-);
-create table empresa (
-idEmpresa int primary key IDENTITY(1,1),
-nomeEmpresa varchar (40)
-);
-create table Fazenda ( 
-idFazenda int primary key IDENTITY(1,1),
-nomeFz varchar (40),
-fkEmpresa INT FOREIGN KEY REFERENCES empresa (idEmpresa),
-) auto_increment = 30;
- 
-create table lotefz (
-idLoteFz int primary key IDENTITY(1,1),
-nomeLote varchar (30),
-fkFazenda INT FOREIGN KEY REFERENCES fazenda (idFazenda)
 );
 
-create table sensor ( 
-idSensor int primary key IDENTITY(1,1),
-nomeSensor varchar (40),
-fkLoteFz INT FOREIGN KEY REFERENCES loteFz (idLoteFz), 
-);
 
-create table dadosSensor (
-idDados int primary key IDENTITY(1,1),
-temperatura decimal (3,1),
-umidade decimal (3,1),
-hora time,
-dataC date,
-fkSensor INT FOREIGN KEY REFERENCES Sensor (idSensor),
-);

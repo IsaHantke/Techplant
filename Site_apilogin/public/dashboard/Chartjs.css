@@ -77,7 +77,6 @@ list-style: none;
 }
 
 /* Termino header */
-/* Criação dos gráficos */
 
 .divtudo {
     width: 100vw;
@@ -105,7 +104,7 @@ list-style: none;
 
 .text1 {
     color: green; 
-   text-align: center; 
+    
 }
 
 .textinho {
@@ -124,30 +123,27 @@ list-style: none;
     margin-bottom: -70px;
     color: #d10a0a;
     margin-left: 90px;
-    padding-top: 86px;
+    padding-top: 94px;
 }
 
 .grafico {
      
-    width: 45vw;
-    margin-top: 70px; 
+    width: 48vw;
+    margin-top: 80px; 
+    margin-left: 10px; 
 }
 
 .sensor2 {
-    margin-top: 23px;   
+    margin-top: 20px;   
     color:#5858ec;
     margin-left: 125px;
 }
 
 .grafico2{
  
-    width: 45vw;
+    width: 48vw;
     margin-left: 5px;
-   margin-bottom: 12px;
-}    
-
- 
-
+}  
   
 .metrica_umid{
       
@@ -156,7 +152,6 @@ list-style: none;
     display: flex;
     align-items: center;
     border-radius: 8px;
-    margin-top: 18px;
     margin-right:100px; 
     font-family: sans-serif;
     
@@ -203,7 +198,7 @@ list-style: none;
 }
 
 #umid_alerta{  
- color: black;
+ color: white;
  font-size: 22px;
  font-weight: 500;
 
@@ -247,7 +242,7 @@ list-style: none;
 }
 
 #umid_alerta2{  
- color: black;
+ color: white;
  font-size: 22px;
  font-weight: 500;
 
@@ -286,7 +281,7 @@ list-style: none;
  padding-top: 5px;
  align-items: center;
  border-radius: 8px;
- font-family: sans-serif;
+ 
   
 }
 
@@ -331,7 +326,7 @@ list-style: none;
 }
 
 #temp_alerta{  
- color: black;
+ color: white;
  font-weight: 500;
  font-size: 22px;
 
@@ -377,7 +372,7 @@ background-color: rgb(255, 255, 0, 0.712);
 }
 
 #temp_alerta2{  
- color: black;
+ color: white;
  font-size: 22px;
  font-weight: 500;
 
@@ -460,7 +455,7 @@ background-color: rgb(255, 255, 0, 0.712);
 }
 
 #umid_alerta{  
-    color: black;
+    color: white;
     font-size: 22px;
     font-weight: 500;
 
@@ -504,7 +499,7 @@ background-color: rgb(255, 255, 0, 0.712);
 }
 
 #umid_alerta2{  
-    color: black;
+    color: white;
     font-size: 22px;
     font-weight: 500;
 

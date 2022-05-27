@@ -5,7 +5,7 @@ var sql = require('mssql');
 var sqlServerConfig = {
     user: "Mateus_Techplant",
     password: "Grupotech50",
-    database: "techplant",
+    database: "Techplant",
     server: "techplant-grupo4.database.windows.net",
     pool: {
         max: 10,
@@ -21,7 +21,7 @@ var sqlServerConfig = {
 var mySqlConfig = {
     host: "localhost",
     user: "aluno",
-    database: "ten",
+    database: "techplant",
     password: "sptech",
 };
 

@@ -35,7 +35,7 @@
           <li class="usuario"> Olá, usuário!</li> 
 
             <div class="ulsair">
-           <li ><a class="sair" href="../login.html">Sair</a></li>
+           <li ><a class="sair" href="login.html">Sair</a></li>
             </div>
 
     </div>
@@ -68,17 +68,6 @@
             </section>
             
                 </div>
-                 
-                <h1 class="text1"> Fazenda Tech - <span class="textinho"> Lote 2:</span></h1>
-
-                <div>
-                    <h3 class="sensor2">Sensor DHT 11 - Umidade</h3>
-                   <section class="grafico2">
-                     <canvas id="dht11Umidade2"></canvas>
-                 </section>
-                 
-                     </div>
-
 
             </div>
              </div>   
@@ -102,24 +91,15 @@
 
                 
                         <h3 class="sensor1">Sensor DHT 11 - Temperatura</h3>
-                
+                        metrica media
                     
                  
                  
                  <div>
                     <section class="grafico">
                         <canvas id="dht11Temperatura"></canvas>
-                    </section>  
+                    </section>
                   </div>  
-                       
-                  <h3 class="sensor1">Sensor DHT 11 - Temperatura</h3>
-                  <div>                
-                    <section class="grafico">
-                        <canvas id="dht11Temperatura2"></canvas>
-                    </section>  
-                  </div> 
-                  
-
 
                    </div>
              </div>
@@ -182,52 +162,7 @@
               }
           }
       }
-  );      
-  
-  
-  var contextoDht11Umidade = document.getElementById('dht11Umidade2').getContext('2d');
-  contextoDht11Umidade.canvas.width = 1000;
-  contextoDht11Umidade.canvas.height = 300;
-  var dht11Umidade = new Chart(
-      contextoDht11Umidade,
-      {
-          type: 'bar',
-          data: {
-              datasets: [{
-                  label: 'Umidade',
-                  type: 'line',
-                  borderColor: ['#45b3e7'],
-                  backgroundColor: ['#89cff0']
-              }]
-          },
-          options: {
-              scales: {
-                  xAxes: [{
-                      distribution: 'series',
-                      ticks: {
-                          beginAtZero: true
-                      }
-                  }],
-                  yAxes: [{
-                      scaleLabel: {
-                          display: true,
-                          labelString: 'Umidade'
-                      },
-                      ticks: {
-                          beginAtZero: true
-                      }
-                  }]
-              },
-              animation: {
-                  duration: 0
-              }
-          }
-      }
-  );      
-
-
-
-  
+  );
   /* -- dht11Temperatura -- */
   var contextoDht11Temperatura = document.getElementById('dht11Temperatura').getContext('2d');
   contextoDht11Temperatura.canvas.width = 1000;
@@ -268,53 +203,8 @@
           }
       }
   );
-    
 
-   
-  var contextoDht11Temperatura = document.getElementById('dht11Temperatura2').getContext('2d');
-  contextoDht11Temperatura.canvas.width = 1000;
-  contextoDht11Temperatura.canvas.height = 300;
-  var dht11Temperatura = new Chart(
-      contextoDht11Temperatura,
-      {
-          type: 'bar',
-          data: {
-              datasets: [{
-                  label: "Temperatura",
-                  type: 'line',
-                  borderColor: ['#ff3232'],
-                  backgroundColor: ['#ff7f7f']
-              }]
-          },
-          options: {
-              scales: {
-                  xAxes: [{
-                      distribution: 'series',
-                      ticks: {
-                          beginAtZero: true
-                      }
-                  }],
-                  yAxes: [{
-                      scaleLabel: {
-                          display: true,
-                          labelString: 'Temperatura'
-                      },
-                      ticks: {
-                          beginAtZero: true
-                      }
-                  }]
-              },
-              animation: {
-                  duration: 0
-              }
-          }
-      }
-  );
-
-
-
-
- /* var paginacao = {};
+  var paginacao = {};
         var tempo = {};
         function obterDados(grafico, endpoint) {
             var http = new XMLHttpRequest();
@@ -348,36 +238,8 @@
             obterDados(dht11Umidade, 'dht11/umidade');
             obterDados(dht11Temperatura, 'dht11/temperatura');
 
-        }, 1000);   
-   
-        var idUsuario = sessionStorage.ID_USUARIO;
-        
-        function alertar(temperatura, umidade){
+        }, 1000);
 
-            var limites = {
-             critico_temp: 22,
-             alerta_temp: 23.5, 
-             ideal_temp: 26,
-             alerta_temp2: 26,
-             critico_temp2: 26
-        
-            }   
-
-          if(temperatura <= limites.critico_temp) {
-            
-            alert(`Critico`) 
-            console.log ("caiu no 1")
-          }
-
-
-
-            }
-         
-
-
-        
-*/
-        
       </script>
 
 
