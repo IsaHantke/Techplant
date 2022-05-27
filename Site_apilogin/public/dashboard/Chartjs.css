@@ -280,9 +280,8 @@ list-style: none;
  display: flex;
  padding-top: 5px;
  align-items: center;
- border-radius: 8px;
- 
-  
+ border-radius: 8px; 
+ font-family: sans-serif;
 }
 
 
@@ -304,7 +303,7 @@ list-style: none;
 }
 
 #temp_critico{  
- color: white;
+ color: black;
  font-size: 22px;
  font-weight: 500;
 
@@ -326,7 +325,7 @@ list-style: none;
 }
 
 #temp_alerta{  
- color: white;
+ color: black;
  font-weight: 500;
  font-size: 22px;
 
@@ -350,7 +349,7 @@ list-style: none;
 }
 
 #temp_ideal{  
- color: white;
+ color: black;
  font-weight: 500;
  font-size: 22px;
 
@@ -372,7 +371,7 @@ background-color: rgb(255, 255, 0, 0.712);
 }
 
 #temp_alerta2{  
- color: white;
+ color: black;
  font-size: 22px;
  font-weight: 500;
 
@@ -394,7 +393,7 @@ background-color: rgb(255, 255, 0, 0.712);
 }
 
 #temp_critico2{  
- color: white;
+ color: black;
  font-size: 22px;
  font-weight: 500;
 
@@ -433,7 +432,7 @@ background-color: rgb(255, 255, 0, 0.712);
 }
 
 #umid_critico{  
-    color: white;
+    color: black;
     font-size: 22px;
     font-weight: 500;
 
@@ -455,7 +454,7 @@ background-color: rgb(255, 255, 0, 0.712);
 }
 
 #umid_alerta{  
-    color: white;
+    color: black;
     font-size: 22px;
     font-weight: 500;
 
@@ -477,7 +476,7 @@ background-color: rgb(255, 255, 0, 0.712);
 }
 
 #umid_ideal{  
-    color: white;
+    color: black;
     font-size: 22px;
     font-weight: 500;
 
@@ -499,7 +498,7 @@ background-color: rgb(255, 255, 0, 0.712);
 }
 
 #umid_alerta2{  
-    color: white;
+    color: black;
     font-size: 22px;
     font-weight: 500;
 
@@ -523,7 +522,7 @@ background-color: rgb(255, 255, 0, 0.712);
 }
 
 #umid_critico2{  
-    color: white;
+    color: black;
     font-size: 22px;
     font-weight: 500;
 
