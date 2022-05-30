@@ -1,123 +1,129 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Login - TechPlant</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/login.css'>
-    <script src='main.js'></script>
     <script src="./js/funcoes.js"></script>
 </head>
+
 <body>
-      <!-- Início Header-->
-    <div class="header"> 
-        
+    <!-- Início Header-->
+    <div class="header">
+
         <div class="div_logobranca"> <img class="img1" src="assets/imgs/logo-branca.png"> </div>
-           
+
         <h1 class="titulo"> TechPlant </h1>
 
-        <div class="container"> 
+        <div class="container">
 
-            
-       
+
+
             <ul class="navbar">
-             <li> <a class="refhome" href="index.html"> Home </a></li>  
+                <li> <a class="refhome" href="index.html"> Home </a></li>
 
-             <li> <a class="refprojeto" href="index.html"> Projeto </a> </li>
-             <li> <a class="refsobrenos" href="index.html">Sobre Nós </a> </li> 
-             <li> <a class="refsimulador" href="SimuladorFinanceiro.html">Simulador Financeiro</a> </li>
-             <li> <a class="refcontato" href="index.html"> Contato </a> </li>
-            
-             <div class="login"> <li> Login  </li> </div>  &nbsp;
-             
-             <div class="cadastro"> <li> <a class="refcadastro" href="cadastro.html"> Cadastro </a> </li> </div> &nbsp;
-        </ul>
-        
+                <li> <a class="refprojeto" href="index.html"> Projeto </a> </li>
+                <li> <a class="refsobrenos" href="index.html">Sobre Nós </a> </li>
+                <li> <a class="refsimulador" href="SimuladorFinanceiro.html">Simulador Financeiro</a> </li>
+                <li> <a class="refcontato" href="index.html"> Contato </a> </li>
+
+                <div class="login">
+                    <li> Login </li>
+                </div> &nbsp;
+
+                <div class="cadastro">
+                    <li> <a class="refcadastro" href="cadastro.html"> Cadastro </a> </li>
+                </div> &nbsp;
+            </ul>
+
         </div>
     </div>
 
     <!-- Fim da Header-->
-    
+
     <!-- Começo do Banner -->
 
     <div class="loginbody">
 
         <div class="loginbanner">
 
-           <div class="bannerimg">
-               <img class="imglogin1" src="assets/imgs/imglogin1.png">
-           </div>
-          
-
-           <div class="partelogin">
-             
-            <div class="logologin">
-
-                <img src="assets/imgs/logo-preta.png" class="pretalogo">
-
-            <span class="logintext"> TechPlant </span>         <div id="div_resultado"></div>
+            <div class="bannerimg">
+                <img class="imglogin1" src="assets/imgs/imglogin1.png">
             </div>
 
-            <div class="fazerlogin"> 
 
-                <p class="textemail"> Email: </p>
-                <input class="inputemail" id="in_email" type="email" placeholder="Example@gmail.com">
-                <p class="textsenha"> Senha: </p>
-                <input class="inputsenha" id="in_senha" type="password" placeholder="Inserir Senha">
+            <div class="partelogin">
 
-            </div>
+                <div class="logologin">
 
-            <div class="debaixo">
+                    <img src="assets/imgs/logo-preta.png" class="pretalogo">
 
-                <div class="debaixo1">
-                <input class="check" type="checkbox" >
-               <span class="lembrar"> Lembrar usuário </span> 
+                    <span class="logintext"> TechPlant </span>
+                    <div id="div_resultado"></div>
                 </div>
 
-                <div class="debaixo2">
-                    <span class="esqueci"> Esqueceu sua senha?</span>
-                </div>
-            </div>
+                <div class="fazerlogin">
 
-
-
-            <div class="debaixo3">
-                <button class="enviar"  onclick="login()"> Login </button>
-            </div>
-
-            <div class="debaixo4"> 
-                
-                <div class="dentrodebaixo4">
-
-                      
-                <div class="conta">
-                 <a class="refcadastrologin"href="cadastro.html">  Não possui uma conta? </a>
-                </div>
-
+                    <p class="textemail"> Email: </p>
+                    <input class="inputemail" id="in_email" type="email" placeholder="Example@gmail.com">
+                    <p class="textsenha"> Senha: </p>
+                    <input class="inputsenha" id="in_senha" type="password" placeholder="Inserir Senha">
 
                 </div>
 
+                <div class="debaixo">
+
+                    <div class="debaixo1">
+                        <input class="check" type="checkbox">
+                        <span class="lembrar"> Lembrar usuário </span>
+                    </div>
+
+                    <div class="debaixo2">
+                        <span class="esqueci"> Esqueceu sua senha?</span>
+                    </div>
+                </div>
+
+
+
+                <div class="debaixo3">
+                    <button class="enviar" onclick="login()"> Login </button>
+                </div>
+
+                <div class="debaixo4">
+
+                    <div class="dentrodebaixo4">
+
+
+                        <div class="conta">
+                            <a class="refcadastrologin" href="cadastro.html"> Não possui uma conta? </a>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
 
             </div>
-
-           </div>
 
         </div>
-     
+
 
 
     </div>
-    
+
     <!-- Fim do banner-->
 
-    <div class="rodape"> 
-              
+    <div class="rodape">
+
         <div class="rodape1">
 
-           Rua Imirim, nº35 Vila Guilherme | São Paulo | SP | CEP 02467-965 <br> <br>
-           TechPlant SA | CNP Mande um email J: 83.864.853.0001-17 <br> <br>
-           Copyright© 2020 - 2022 TechPlant Company S.L. Todos direitos reservados. 
+            Rua Imirim, nº35 Vila Guilherme | São Paulo | SP | CEP 02467-965 <br> <br>
+            TechPlant SA | CNP Mande um email J: 83.864.853.0001-17 <br> <br>
+            Copyright© 2020 - 2022 TechPlant Company S.L. Todos direitos reservados.
 
         </div>
 
@@ -125,60 +131,56 @@
             <img class="imgrodape" src="assets/imgs/rodape1.png">
         </div>
 
-       <div class="rodape3">
-           <b> Atalhos</b> <br> <br>
-           Projeto <br> <br>
-           Contato <br>
+        <div class="rodape3">
+            <b> Atalhos</b> <br> <br>
+            Projeto <br> <br>
+            Contato <br>
 
-       </div>
- 
+        </div>
 
-       <div class="rodape4">
-          <b>Dúvidas</b> <br> <br>
-          Mande um email <br> <br>
-          Quem Somos
-       </div>
 
-</div>
+        <div class="rodape4">
+            <b>Dúvidas</b> <br> <br>
+            Mande um email <br> <br>
+            Quem Somos
+        </div>
+
+    </div>
 
 </body>
-</html> 
+
+</html>
 
 <script>
 
-    function login(){
+    function login() {
 
         var emailVar = in_email.value
-        var senhaVar = in_senha.value 
+        var senhaVar = in_senha.value
 
 
-   
-        if (emailVar == "" || senhaVar == "") {  
-        
-            div_resultado.style.display = "block" 
-        div_resultado.innerHTML = (`Para prosseguir preencher  todos os campos!`)  
-       
-        return false
-    }      
-              
 
-    if (emailVar != senhaVar)  { 
+        if (emailVar == "" || senhaVar == "") {
 
-        div_resultado.style.display = "block" 
-        div_resultado.innerHTML = (`E-mail ou senha inválido. Verifique e tente novamente!`)  
-       
-    }
-    
-    
-      if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
-    
-    div_resultado.style.display = "block" 
-    div_resultado.innerHTML = (`E-mail inválido! Verifique e tente novamente.`)                                         
-    
-    return false
-}      
-       
-                                                    
+            div_resultado.style.display = "block"
+            div_resultado.innerHTML = (`Para prosseguir preencher  todos os campos!`)
+            return false
+
+        }
+
+        if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
+
+            div_resultado.style.display = "block"
+            div_resultado.innerHTML = (`E-mail inválido! Verifique e tente novamente.`)
+
+            return false
+        } else {
+
+            div_resultado.style.display = "block"
+            div_resultado.innerHTML = (`Indo para tela de dashboard!`)
+        }
+
+
         console.log("FORM LOGIN: ", emailVar);
         console.log("FORM SENHA: ", senhaVar);
 
@@ -206,8 +208,8 @@
                     sessionStorage.ID_USUARIO = json.id;
 
                     setTimeout(function () {
-                        window.location = "../dashboard/dashboard.html"
-                    }, 1000); // apenas para exibir o loading
+                        window.location = "dashboard.html"
+                    }, 2000); // apenas para exibir o loading
 
                 });
 
@@ -233,5 +235,5 @@
     }
 
 
- 
+
 </script>

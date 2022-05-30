@@ -5,16 +5,21 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>DashBoard - TechPlant</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='Chartjs.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/Chartjs.css'>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
-    <script src="http://www.chartjs.org/samples/latest/utils.js"></script>
-    <script src='main.js'></script>
+    <script src= ../dashboard/main.js></script>
     <script src="../js/funcoes.js"></script>
 
     <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
     
-
+    <style>
+        canvas {
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+        }
+    </style>
 
 </head>
 <body>
@@ -22,7 +27,7 @@
 
     <div class="header"> 
         
-    <div class="div_logobranca"> <img class="img1" src="logo-branca2.png"> </div>
+    <div class="div_logobranca"> <img class="img1" src="./css/logo-branca2.png"> </div>
        
     <h1 class="titulo"> TechPlant </h1>
 
@@ -114,7 +119,8 @@
        
         <div class="graph">
             <canvas id="canvas_grafico"></canvas>
-        </div>
+        </div> 
+
 
 </body>
 </html>
@@ -127,12 +133,9 @@ let proximaAtualizacao;
 window.onload = obterDadosGrafico(1);
 
 
-verificar_autenticacao();
-
 function alterarTitulo(idAquario) {
     var tituloAquario = document.getElementById("tituloAquario")
-    tituloAquario.innerHTML = "Últimas medidas de Temperatura e Umidade do <span style='color: #e6005a'>Aquário " + idAquario + "</span>"
-}
+   }
 
 
   /* -- dht11Umidade -- */
@@ -197,7 +200,7 @@ function alterarTitulo(idAquario) {
 
         console.log(JSON.stringify(dados));
 
-        var ctx = canvas_grafico.getContext('2d');
+        var ctx = dht11Umidade.getContext('2d')
         window.grafico_linha = Chart.Line(ctx, {
             data: dados,
             options: {
@@ -211,7 +214,7 @@ function alterarTitulo(idAquario) {
                 },
                 scales: {
                     yAxes: [{
-                        type: 'linear',
+                        type: 'line',
                         display: true,
                         position: 'left',
                         id: 'y-temperatura',
@@ -221,7 +224,7 @@ function alterarTitulo(idAquario) {
                             min: 0
                         }
                     }, {
-                        type: 'linear',
+                        type: 'line',
                         display: false,
                         position: 'right',
                         id: 'y-umidade',
