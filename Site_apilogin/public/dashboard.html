@@ -6,9 +6,7 @@
     <title>DashBoard - TechPlant</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/Chartjs.css'>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
     <script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
-    <script src= ../dashboard/main.js></script>
     <script src="../js/funcoes.js"></script>
 
     <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
@@ -117,9 +115,6 @@
 
         </div>
        
-        <div class="graph">
-            <canvas id="canvas_grafico"></canvas>
-        </div> 
 
 
 </body>
@@ -199,10 +194,15 @@ function alterarTitulo(idAquario) {
         }
 
         console.log(JSON.stringify(dados));
+          
+        console.log('passei aqui');
 
         var ctx = dht11Umidade.getContext('2d')
-        window.grafico_linha = Chart.Line(ctx, {
+        console.log('passei aqui');
+        window.grafico_linha = Chart.Line(ctx, dht11Umidade, {
+            
             data: dados,
+            
             options: {
                 responsive: true,
                 animation: { duration: 500 },
@@ -264,6 +264,8 @@ function alterarTitulo(idAquario) {
                     dados.labels.shift(); // apagar o primeiro
                     dados.labels.push(novoRegistro[0].momento_grafico); // incluir um novo momento
                     
+                    console.log('passei aq')
+
                     dados.datasets[0].data.shift();  // apagar o primeiro de umidade
                     dados.datasets[0].data.push(novoRegistro[0].umidade); // incluir uma nova medida de umidade
                     

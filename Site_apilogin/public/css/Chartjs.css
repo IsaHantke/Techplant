@@ -116,7 +116,8 @@ list-style: none;
     height: 30vh;
     display: flex;
   margin-left: 50px;
-}
+} 
+
 
 .sensor1 {
      
@@ -140,10 +141,15 @@ list-style: none;
 }
 
 .grafico2{
- 
+     
     width: 48vw;
     margin-left: 5px;
-}  
+} 
+
+#dht11Umidade{
+
+
+}
   
 .metrica_umid{
       
