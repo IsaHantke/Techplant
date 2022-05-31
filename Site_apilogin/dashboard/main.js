@@ -29,7 +29,7 @@ const serial = async (
                 host: 'localhost',
                 user: 'aluno',
                 password: 'sptech',
-                database: 'aquario'
+                database: 'techplant'
             }
         ).promise();
     } else if (AMBIENTE == 'producao') {

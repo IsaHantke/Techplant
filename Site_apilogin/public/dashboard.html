@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
@@ -10,131 +11,156 @@
     <script src="../js/funcoes.js"></script>
 
     <script src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
-    
+
     <style>
         /* canvas {
             -moz-user-select: none;
             -webkit-user-select: none;
             -ms-user-select: none;
         } */
-        </style>
+    </style>
 
 </head>
+
 <body>
-    
-    
-    <div class="header"> 
-        
+
+
+    <div class="header">
+
         <div class="div_logobranca"> <img class="img1" src="./css/logo-branca2.png"> </div>
-        
+
         <h1 class="titulo"> TechPlant </h1>
-        
-        <div class="container"> 
-            
-            
-            <button class="btn-chart btn-pink" onclick="obterDadosGrafico(1)">Aquario 1</button>
-            <li class="usuario"> Olá, usuário!</li>  
-            
-            
-            
+
+        <div class="container">
+
+
+
+            <span class="usuario">Olá, usuário!</span>
+
+
+
             <div class="ulsair">
-                <li ><a class="sair" href="login.html">Sair</a></li>
+                <li><a class="sair" href="login.html">Sair</a></li>
             </div>
-            
+
         </div>
     </div>
     <!-- Termino header-->
-    
+
     <div class="divtudo">
-        
-        
-        <div class="fazenda1">                   
-            
-            <div class="metrica_umid"> 
-                <div class="critico_umid">Critico<p id="umid_critico">79%</p></div>
-                <div class="alerta_umid">Alerta<p id="umid_alerta">80.25%</p></div>
-                <div class="ideal_umid">Ideal<p id="umid_ideal">82.5%</p></div>
-        <div class="alerta2_umid">Alerta<p id="umid_alerta2">84.75%</p></div>
-        <div class="critico2_umid">Critico <p id="umid_critico2">86%</p></div>
-    </div>
-    
-    <h1 class="text1"> Fazenda Tech - <span class="textinho"> Lote 1:</span></h1>
-    
-    
-    <div class="graf1">  
-        
-        <div>
-            <h3 class="sensor2">Sensor DHT 11 - Umidade</h3>
-            <section class="grafico2">
-                <canvas id="dht11Umidade"></canvas>
-            </section>
-            
+
+
+        <div class="mural_dahs">
+
+            <div class="card_dash">
+                <h1 class="text1"> Fazenda Tech - <span class="textinho"> Lote 1:</span></h1>
+
+                <h3 class="sensor2">Sensor DHT 11</h3>
+                <button class="segunda" onclick="segunda()">Lote 2</button>
+
+                <div class="helpdesk">
+
+                    <button class="btn_helpdesk" onclick="helpdesk()"><a class="texto_help" target="_blank"
+                            href="https://techplant.on.spiceworks.com/portal">Ajuda?</a></button>
                 </div>
 
             </div>
-             </div>   
-               
-             
-             
-                     
-               <div class="fazenda2"> 
+
+
+        </div>
+
+
+
+
+
+
+        <div class="fazenda1">
+
+            <div class="metrica_umid">
+                <div class="critico_umid">Critico<p id="umid_critico">79%</p>
+                </div>
+                <div class="alerta_umid">Alerta<p id="umid_alerta">80.25%</p>
+                </div>
+                <div class="ideal_umid">Ideal<p id="umid_ideal">82.5%</p>
+                </div>
+                <div class="alerta2_umid">Alerta<p id="umid_alerta2">84.75%</p>
+                </div>
+                <div class="critico2_umid">Critico <p id="umid_critico2">86%</p>
+                </div>
+
+            </div>
+
+            <div class="fazenda2">
 
 
                 <div class="grafs">
-                <div class="temperatura">     
-                    
-                    <div class="metricas">  
-                        <div class="critico">Critico<p id="temp_critico">22°C</p></div>
-                        <div class="alerta">Alerta<p id="temp_alerta">23.5°C</p></div>
-                        <div class="ideal">Ideal<p id="temp_ideal">26°C</p></div>
-                        <div class="alerta2">Alerta<p id="temp_alerta2">26°C</p></div>                        
-                        <div class="critico2">Critico<p id="temp_critico2">26°C</p></div>
+                    <div class="temperatura">
+
+                        <div class="metricas">
+                            <div class="critico">Critico<p id="temp_critico">22°C</p>
+                            </div>
+                            <div class="alerta">Alerta<p id="temp_alerta">23.5°C</p>
+                            </div>
+                            <div class="ideal">Ideal<p id="temp_ideal">26°C</p>
+                            </div>
+                            <div class="alerta2">Alerta<p id="temp_alerta2">26°C</p>
+                            </div>
+                            <div class="critico2">Critico<p id="temp_critico2">26°C</p>
+                            </div>
+                        </div>
                     </div>
+                </div>
 
-                
-                        <h3 class="sensor1">Sensor DHT 11 - Temperatura</h3>
-                    
-                 
-                 
-                 <div>
-                    <section class="grafico">
-                        <canvas id="dht11Temperatura"></canvas>
+            </div>
+
+
+
+            <div class="graf1">
+
+                <div>
+                    <section class="grafico2">
+                        <canvas id="dht11Umidade"></canvas>
                     </section>
-                  </div>  
 
-                   </div>
-             </div>
-            
-               </div>
-    
-    
-         </div>
+                </div>
 
-
+            </div>
         </div>
 
-        </div>
-       
+
+
+
+
+
+
+    </div>
+
+
+    </div>
+
+    </div>
+
 
 
 </body>
+
 </html>
 
 
-<script> 
+<script>
 
-let proximaAtualizacao;
+    let proximaAtualizacao;
 
-window.onload = obterDadosGrafico(1);
-
-
-function alterarTitulo(idAquario) {
-    var tituloAquario = document.getElementById("tituloAquario")
-   }
+    window.onload = obterDadosGrafico(1);
 
 
-  /* -- dht11Umidade -- */
-  function obterDadosGrafico(id) {
+    function alterarTitulo(idAquario) {
+        var tituloAquario = document.getElementById("tituloAquario")
+    }
+
+
+    /* -- dht11Umidade -- */
+    function obterDadosGrafico(id) {
         alterarTitulo(id)
 
         if (proximaAtualizacao != undefined) {
@@ -194,15 +220,15 @@ function alterarTitulo(idAquario) {
         }
 
         console.log(JSON.stringify(dados));
-          
+
         console.log('passei aqui');
 
         var ctx = dht11Umidade.getContext('2d')
         console.log('passei aqui');
         window.grafico_linha = Chart.Line(ctx, {
-            
+
             data: dados,
-            
+
             options: {
                 responsive: true,
                 animation: { duration: 500 },
@@ -263,12 +289,12 @@ function alterarTitulo(idAquario) {
                     // tirando e colocando valores no gráfico
                     dados.labels.shift(); // apagar o primeiro
                     dados.labels.push(novoRegistro[0].momento_grafico); // incluir um novo momento
-                    
+
                     console.log('passei aq')
 
                     dados.datasets[0].data.shift();  // apagar o primeiro de umidade
                     dados.datasets[0].data.push(novoRegistro[0].dht11_umidade); // incluir uma nova medida de umidade
-                    
+
                     dados.datasets[1].data.shift();  // apagar o primeiro de temperatura
                     dados.datasets[1].data.push(novoRegistro[0].dht11_temperatura); // incluir uma nova medida de temperatura
 
@@ -289,6 +315,17 @@ function alterarTitulo(idAquario) {
 
     }
 
-      </script>
 
 
+    var cores = dht11_umidade
+    cor = ""
+    if (cores <= 79) {
+        cor = 'red'
+        dht11Umidade.backgroundColor = `${cor}`
+
+
+
+    }
+
+
+</script>

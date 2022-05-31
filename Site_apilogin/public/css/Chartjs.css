@@ -58,8 +58,9 @@ body {
     color: #ffffff;
     list-style: none;
     font-size: xx-large;
-    padding-left: 23vh;
-    padding-right: 25vw;
+    text-align: center;
+    padding-left: 25vh;
+    padding-right: 27vw;
 }  
 
 .ulsair{
@@ -83,8 +84,60 @@ list-style: none;
     height: 80vh;
     background-color: white;
     display: flex;
+ /*   flex-direction: column; */
 }
   
+
+/* Iniciando card */
+
+.card_dash{
+    
+    background-color:#497320;
+    height: 60vh;
+    width: 17vw;
+    margin-top: 25px;
+    border: 3px #497320 solid;
+    border-radius: 8px;
+}
+
+.segunda{  
+    margin-top: 50px;
+    margin-left: 55px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 2px white solid;
+    color: black;
+    height: 8vh;
+    width: 8vw;
+
+}
+
+.btn_helpdesk{
+     margin-top: 40px;
+     margin-left: 55px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border: 2px white solid;
+    height: 8vh;
+    width: 8vw;
+}
+
+.texto_help{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+  
+}
+.fazenda1 {
+    width: 50vw;
+    height: 83vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-left: 100px;
+}
+
+
 .fazenda2 {
     width: 50vw;
     height: 75vh;
@@ -94,62 +147,36 @@ list-style: none;
 }
 
 
-.fazenda1 {
-    width: 50vw;
-    height: 75vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-}
-
 .text1 {
-    color: green; 
-    
+    color: white; 
+    font-size: 18px;
+    text-align: center;
 }
 
 .textinho {
     font-size: 20px;
 }
+ 
 
-.grafs {
-    width: 48vw;
-    height: 30vh;
-    display: flex;
-  margin-left: 50px;
-} 
-
-
-.sensor1 {
-     
-    margin-bottom: -70px;
-    color: #d10a0a;
-    margin-left: 90px;
-    padding-top: 94px;
-}
-
-.grafico {
+/*.grafico {
      
     width: 48vw;
     margin-top: 80px; 
     margin-left: 10px; 
-}
+} */
 
 .sensor2 {
     margin-top: 20px;   
-    color:#5858ec;
-    margin-left: 125px;
+    color:white;
+   text-align: center;
 }
 
 .grafico2{
-     
-    width: 48vw;
+    margin-top: 10px;
+    width: 40vw;
     margin-left: 5px;
 } 
 
-#dht11Umidade{
-
-
-}
   
 .metrica_umid{
       
@@ -158,7 +185,8 @@ list-style: none;
     display: flex;
     align-items: center;
     border-radius: 8px;
-    margin-right:100px; 
+    margin-right:32px; 
+    margin-top: 10px;
     font-family: sans-serif;
     
 } 
@@ -281,10 +309,11 @@ list-style: none;
 
 .metricas{
 
- width: 80%;
+ width: 72%;
  height: 18vh;
  display: flex;
  padding-top: 5px;
+ margin-left: 99px;
  align-items: center;
  border-radius: 8px; 
  font-family: sans-serif;
@@ -407,17 +436,7 @@ background-color: rgb(255, 255, 0, 0.712);
 
 
 
-.metrica_umid{
-      
-       width: 85%;
-       height: 20vh;
-       display: flex;
-       align-items: center;
-       border-radius: 8px;
-       margin-right:100px; 
-       font-family: sans-serif;
-       
-} 
+
  
 
 
