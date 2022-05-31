@@ -2,7 +2,7 @@ create database techplant;
 use techplant;
 
 
-create table login (
+create table login1 (
 idLogin int primary key auto_increment,
 nome varchar (40),
 telefone char (14),
