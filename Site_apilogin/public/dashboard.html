@@ -9,63 +9,63 @@
     <script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
     <script src="../js/funcoes.js"></script>
 
-    <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
+    <script src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
     
     <style>
-        canvas {
+        /* canvas {
             -moz-user-select: none;
             -webkit-user-select: none;
             -ms-user-select: none;
-        }
-    </style>
+        } */
+        </style>
 
 </head>
 <body>
-
-
+    
+    
     <div class="header"> 
         
-    <div class="div_logobranca"> <img class="img1" src="./css/logo-branca2.png"> </div>
-       
-    <h1 class="titulo"> TechPlant </h1>
-
-    <div class="container"> 
-
-          
-        <button class="btn-chart btn-pink" onclick="obterDadosGrafico(1)">Aquario 1</button>
-          <li class="usuario"> Olá, usuário!</li>  
-      
-
-
+        <div class="div_logobranca"> <img class="img1" src="./css/logo-branca2.png"> </div>
+        
+        <h1 class="titulo"> TechPlant </h1>
+        
+        <div class="container"> 
+            
+            
+            <button class="btn-chart btn-pink" onclick="obterDadosGrafico(1)">Aquario 1</button>
+            <li class="usuario"> Olá, usuário!</li>  
+            
+            
+            
             <div class="ulsair">
-           <li ><a class="sair" href="login.html">Sair</a></li>
+                <li ><a class="sair" href="login.html">Sair</a></li>
             </div>
-
-    </div>
+            
+        </div>
     </div>
     <!-- Termino header-->
-
+    
     <div class="divtudo">
-             
+        
         
         <div class="fazenda1">                   
-
-       <div class="metrica_umid"> 
-        <div class="critico_umid">Critico<p id="umid_critico">79%</p></div>
-        <div class="alerta_umid">Alerta<p id="umid_alerta">80.25%</p></div>
-        <div class="ideal_umid">Ideal<p id="umid_ideal">82.5%</p></div>
+            
+            <div class="metrica_umid"> 
+                <div class="critico_umid">Critico<p id="umid_critico">79%</p></div>
+                <div class="alerta_umid">Alerta<p id="umid_alerta">80.25%</p></div>
+                <div class="ideal_umid">Ideal<p id="umid_ideal">82.5%</p></div>
         <div class="alerta2_umid">Alerta<p id="umid_alerta2">84.75%</p></div>
         <div class="critico2_umid">Critico <p id="umid_critico2">86%</p></div>
-       </div>
-
-           <h1 class="text1"> Fazenda Tech - <span class="textinho"> Lote 1:</span></h1>
-                 
-               
-             <div class="graf1">  
-
-                <div>
-               <h3 class="sensor2">Sensor DHT 11 - Umidade</h3>
-              <section class="grafico2">
+    </div>
+    
+    <h1 class="text1"> Fazenda Tech - <span class="textinho"> Lote 1:</span></h1>
+    
+    
+    <div class="graf1">  
+        
+        <div>
+            <h3 class="sensor2">Sensor DHT 11 - Umidade</h3>
+            <section class="grafico2">
                 <canvas id="dht11Umidade"></canvas>
             </section>
             
@@ -178,8 +178,8 @@ function alterarTitulo(idAquario) {
                 {
                     yAxisID: 'y-temperatura',
                     label: 'Temperatura',
-                    borderColor: '#FFF',
-                    backgroundColor: '#32b9cd8f',
+                    borderColor: 'red',
+                    backgroundColor: 'red',
                     fill: true,
                     data: []
                 }
@@ -189,8 +189,8 @@ function alterarTitulo(idAquario) {
         for (i = 0; i < resposta.length; i++) {
             var registro = resposta[i];
             dados.labels.push(registro.momento_grafico);
-            dados.datasets[0].data.push(registro.umidade);
-            dados.datasets[1].data.push(registro.temperatura);
+            dados.datasets[0].data.push(registro.dht11_umidade);
+            dados.datasets[1].data.push(registro.dht11_temperatura);
         }
 
         console.log(JSON.stringify(dados));
@@ -199,7 +199,7 @@ function alterarTitulo(idAquario) {
 
         var ctx = dht11Umidade.getContext('2d')
         console.log('passei aqui');
-        window.grafico_linha = Chart.Line(ctx, dht11Umidade, {
+        window.grafico_linha = Chart.Line(ctx, {
             
             data: dados,
             
@@ -214,7 +214,7 @@ function alterarTitulo(idAquario) {
                 },
                 scales: {
                     yAxes: [{
-                        type: 'line',
+                        type: 'linear',
                         display: true,
                         position: 'left',
                         id: 'y-temperatura',
@@ -224,7 +224,7 @@ function alterarTitulo(idAquario) {
                             min: 0
                         }
                     }, {
-                        type: 'line',
+                        type: 'linear',
                         display: false,
                         position: 'right',
                         id: 'y-umidade',
@@ -267,10 +267,10 @@ function alterarTitulo(idAquario) {
                     console.log('passei aq')
 
                     dados.datasets[0].data.shift();  // apagar o primeiro de umidade
-                    dados.datasets[0].data.push(novoRegistro[0].umidade); // incluir uma nova medida de umidade
+                    dados.datasets[0].data.push(novoRegistro[0].dht11_umidade); // incluir uma nova medida de umidade
                     
                     dados.datasets[1].data.shift();  // apagar o primeiro de temperatura
-                    dados.datasets[1].data.push(novoRegistro[0].temperatura); // incluir uma nova medida de temperatura
+                    dados.datasets[1].data.push(novoRegistro[0].dht11_temperatura); // incluir uma nova medida de temperatura
 
                     window.grafico_linha.update();
 
