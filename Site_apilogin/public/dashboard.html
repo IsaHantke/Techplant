@@ -142,7 +142,9 @@
     </div>
 
 
-
+  
+    <div id="div_resultado"></div>
+ 
 </body>
 
 </html>
@@ -213,12 +215,32 @@
             ]
         };
 
+        // var mostrar_alertaU = false;
+        // var mostrar_alertaT = false;
+
+        // var criticidadeU = null;
+        // var criticidadeT = null;
+
         for (i = 0; i < resposta.length; i++) {
             var registro = resposta[i];
             dados.labels.push(registro.momento_grafico);
             dados.datasets[0].data.push(registro.dht11_Umidade);
             dados.datasets[1].data.push(registro.dht11_Temperatura);
-        }
+           
+        
+        // if (registro.dht11_Umidade > 86 || registro.dht11_Umidade < 79  ) {
+        //         mostrar_alertaU = true
+        //         criticidadeU = true
+                // div_resultado.innerHTML = "Critico"
+            // }
+
+        // if (mostrar_alertaU == true) { 
+                
+        // }
+        //     if (criticidadeU == true){ 
+                
+        //         criticidadeU == 'red'
+        // }
 
         console.log(JSON.stringify(dados));
 
@@ -291,10 +313,25 @@
                     dados.labels.shift(); // apagar o primeiro
                     dados.labels.push(novoRegistro[0].momento_grafico); // incluir um novo momento
 
-                    console.log('passei aq')
+                      console.log('passei aq') 
+                         
+            
 
                     dados.datasets[0].data.shift();  // apagar o primeiro de umidade
                     dados.datasets[0].data.push(novoRegistro[0].dht11_umidade); // incluir uma nova medida de umidade
+                        
+            //         var mostrar_alertaU = false;
+            //          var mostrar_alertaT = false;
+
+            //          var criticidadeU = null;
+            //          var criticidadeT = null;
+
+                                          
+            //         if (registro.dht11_umidade > 86 || registro.dht11_umidade < 79  ) {
+            //            mostrar_alertaU = true
+            //            criticidadeU = "red"    
+            // }
+
 
                     dados.datasets[1].data.shift();  // apagar o primeiro de temperatura
                     dados.datasets[1].data.push(novoRegistro[0].dht11_temperatura); // incluir uma nova medida de temperatura
@@ -338,32 +375,34 @@
     // }
 
 
-    // function obterdados(idDados) {
-    //     fetch(`/medidas/tempo-real/${idDados}`)
-    //         .then(resposta => {
+    function obterdados(idAquario) {
+        fetch(`/medidas/tempo-real/${idAquario}`)
+            .then(resposta => {
 
-    //             if (resposta.ok) {
-    //                 resposta.json().then(resposta => {
+                if (resposta.ok) {
+                    resposta.json().then(resposta => {
 
-    //                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                        console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
 
-    //                     var dados = {
-    //                         dht11_temperatura: resposta[1].dht11_temperatura,
-    //                     }
+                        var dados = {
+                            temperatura: resposta[0].temperatura,
+                        }
 
-    //                     alertar(resposta[1].dht11_temperatura, idDados);
-    //                 });
-    //             } else {
+                        alertar (Number (resposta[0].dht11_temperatura, idAquario));
+                    });
+                } else {
 
-    //                 console.error('Nenhum dado encontrado ou erro na API');
-    //             }
-    //         })
-    //         .catch(function (error) {
-    //             console.error(`Erro na obtenção dos dados do aquario p/ gráfico: ${error.message}`);
-    //         });
+                    console.error('Nenhum dado encontrado ou erro na API');
+                }
+            })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados do aquario p/ gráfico: ${error.message}`);
+            });
 
-    //     }
-    function alertar(dht11_temperatura, idDados) {
+        }
+    }
+
+    function alertar(temperatura, idAquario) {
         var limites = {
             muito_quente: 23,
             quente: 22,
@@ -375,26 +414,32 @@
         var classe_temperatura = 'cor-alerta';
 
         if (temperatura >= limites.muito_quente) {
-            alert (`Opa opa`)
-            console.log("Caiu no 1")
+            // console.log("Caiu no 1");
+            alert (`Temp esta muitp quente`)
         }
         else if (temperatura < limites.muito_quente && temperatura >= limites.quente) {
             classe_temperatura = 'cor-alerta alerta-quente';
             console.log("caiu no 2")
+            alert ('bbb')
         }
         else if (temperatura < limites.quente && temperatura > limites.frio) {
             classe_temperatura = 'cor-alerta ideal';
             console.log("caiu no 3")
+            alert ('ola')
         }
         else if (temperatura <= limites.frio && temperatura > limites.muito_frio) {
             classe_temperatura = 'cor-alerta alerta-frio';
             console.log("caiu no 4")
+            alert ('muito f')
         }
-        else if (temperatura < limites.min_temperatura) {
+        else if (temperatura < limites.muito_frio) {
             classe_temperatura = 'cor-alerta perigo-frio';
-            console.log("caiu no 5")
+            console.log("caiu no 5")  
+            alert('muito quente')
         }
 
+
     }
+
 
 </script>
