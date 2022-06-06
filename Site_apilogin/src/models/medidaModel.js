@@ -19,8 +19,8 @@ function buscarUltimasMedidas(idAquario, limite_linhas) {
         dht11_Temperatura,
                         momento,
                         DATE_FORMAT(momento,'%H:%i:%s') as momento_grafico
-                    from dadosSensor
-                    order by desc limit ${limite_linhas}`;
+                    from dadosSensor  
+                    order by idDados desc limit ${limite_linhas}`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return
@@ -47,8 +47,8 @@ function buscarMedidasEmTempoReal(idAquario) {
         instrucaoSql = `select  
         dht11_umidade,
         dht11_temperatura,
-                        DATE_FORMAT(momento,'%H:%i:%s') as momento_grafico, 
-                        fkSensor 
+                    momento,
+                        DATE_FORMAT(momento,'%H:%i:%s') as momento_grafico
                         from dadosSensor 
                     order by idDados desc limit 1`;
     } else {
