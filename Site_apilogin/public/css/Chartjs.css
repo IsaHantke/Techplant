@@ -54,7 +54,7 @@ body {
 
 }
 
-.usuario {
+#usuario {
     color: #ffffff;
     list-style: none;
     font-size: xx-large;
@@ -558,4 +558,38 @@ background-color: rgb(255, 255, 0, 0.712);
     width: 80%;
     margin: auto;
     padding-top: 10px;
+  } 
+    
+.analitycs{
+   
+    display: flex;
+    flex-direction: column;
+
+}
+
+  #div_resultado{
+
+    margin-left: 40px;
+    margin-top: 50px;
+    padding-top: 10px;
+    width: 30vh;
+    text-align: center;
+    height: 6vh;
+    font-weight: 800;
+    border: 3px solid yellow;
+    border-radius: 5px;
+  }
+
+  #div_resultado_temp{
+
+    margin-top: 50px;
+    padding-top: 10px;
+    margin-left: 40px;
+    width: 30vh;
+    text-align: center;
+    height: 6vh;
+    font-weight: 800;
+    border: 3px solid yellow;
+    border-radius: 5px;
+    display: none;
   }
