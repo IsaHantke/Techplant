@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'GrupotechPlant'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_EA60663F64AB48EDA675D8BDACC010FE }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7A8112130651496289400D2168F52BEC }}
           package: .
