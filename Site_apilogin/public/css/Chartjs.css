@@ -59,9 +59,17 @@ body {
     list-style: none;
     font-size: xx-large;
     text-align: center;
-    padding-left: 25vh;
-    padding-right: 27vw;
+    padding-left: 1vh;
+    padding-right: 18vw; 
 }  
+.usuario{
+  
+    color: #ffffff;
+    list-style: none;
+    font-size: xx-large;
+    text-align: center;
+
+}
 
 .ulsair{
 justify-content: space-between;
@@ -120,6 +128,8 @@ list-style: none;
     border: 2px white solid;
     height: 8vh;
     width: 8vw;
+    text-decoration: none;
+    color: black;
 }
 
 .texto_help{

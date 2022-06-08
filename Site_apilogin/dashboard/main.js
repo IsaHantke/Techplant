@@ -11,6 +11,7 @@ const HABILITAR_OPERACAO_INSERIR = true;
 // const AMBIENTE = 'desenvolvimento';
 
 // escolha deixar a linha 'producao' descomentada se quiser conectar seu arduino ao banco de dados remoto, SQL Server
+// const AMBIENTE = 'producao';
 const AMBIENTE = 'desenvolvimento';
 
 const serial = async (
@@ -75,10 +76,10 @@ const serial = async (
 
                 // Este insert irá inserir os dados na tabela "medida" -> altere se necessário
                 // Este insert irá inserir dados de fk_aquario id=1 >> você deve ter o aquario de id 1 cadastrado.
-                sqlquery = `INSERT INTO dadosSensor (dht11_Umidade, dht11_Temperatura, momento, fkSensor) VALUES (${dht11_Umidade}, ${dht11_Temperatura} CURRENT_TIMESTAMP, 1)`;
+                sqlquery = `INSERT INTO dadosSensor (dht11_umidade, dht11_temperatura, momento, fkSensor) VALUES (${dht11_Umidade}, ${dht11_Temperatura}, CURRENT_TIMESTAMP, 3)`;
 
                 // CREDENCIAIS DO BANCO REMOTO - SQL SERVER
-                const connStr = "Server=servidor-acquatec.database.windows.net;Database=bd-acquatec;User Id=usuarioParaAPIArduino_datawriter;Password=#Gf_senhaParaAPI;";
+                const connStr = "Server=techplant-grupo4.database.windows.net;Database=techplant;User Id=Mateus_Techplant;Password=Grupotech50";
 
                 function inserirComando(conn, sqlquery) {
                     conn.query(sqlquery);
@@ -94,7 +95,7 @@ const serial = async (
                 // Este insert irá inserir os dados na tabela "medida" -> altere se necessário
                 // Este insert irá inserir dados de fk_aquario id=1 >> você deve ter o aquario de id 1 cadastrado.
                 await poolBancoDados.execute(
-                    'INSERT INTO dadosSensor (dht11_Umidade, dht11_Temperatura, momento, fkSensor) VALUES (?, ?, now(),50)',
+                    'INSERT INTO dadosSensor (dht11_umidade, dht11_temperatura, momento, fkSensor) VALUES (?, ?, now(),50)',
                     [dht11_Umidade, dht11_Temperatura]
                 );
                 console.log("valores inseridos no banco: ", dht11_Umidade + ", " + dht11_Temperatura)
