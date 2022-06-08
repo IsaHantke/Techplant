@@ -226,7 +226,7 @@
                 div_resultado.style.display = "block"
                 div_resultado.style.borderColor = 'red'
                 div_resultado.style.backgroundColor = 'red'
-                div_resultado.innerHTML = "Umidade está em estado critico" 
+                div_resultado.innerHTML = "Atenção!! Umidade está em estado critico" 
 
                 setTimeout(() => sumirMensagem(idDados, dados), 5000)
                 
@@ -234,7 +234,7 @@
                 div_resultado.style.display = "block"
                 div_resultado.style.borderColor = 'yellow'
                 div_resultado.style.backgroundColor = 'yellow'
-                div_resultado.innerHTML = "Umidade está em estado de alerta 1" 
+                div_resultado.innerHTML = "Atenção!! Umidade está em alerta." 
                 // dados.datasets[0].backgroundColor = `yellow`;
                 //  dados.datasets[0].borderColor = `yellow`;
         
@@ -243,7 +243,8 @@
             } else if (registro.dht11_Umidade >= 84.1 && registro.dht11_Umidade <= 85.9) {
                 div_resultado.style.display = "block"
                 div_resultado.style.borderColor = 'yellow'
-                div_resultado.innerHTML = "Umidade está em estado de alerta2" 
+                div_resultado.style.backgroundColor = 'yellow'
+                div_resultado.innerHTML = "Atenção!! Umidade está em alerta." 
                 setTimeout(() => sumirMensagem(idDados, dados), 5000)
 
             } else if (registro.dht11_Umidade >= 82.1 && registro.dht11_Umidade <= 83.9 ){
@@ -260,7 +261,7 @@
                 div_resultado_temp.style.display = "block"
                 div_resultado_temp.style.backgroundColor = 'red'
                 div_resultado_temp.style.borderColor = 'white'
-                div_resultado_temp.innerHTML = "Atenção temperatura está critica"
+                div_resultado_temp.innerHTML = "Atenção!! Temperatura está crítica."
                
                 setTimeout(() => sumirMensagem(idDados, dados), 5000);
                  
@@ -268,7 +269,7 @@
                 div_resultado_temp.style.display = "block"
                 div_resultado_temp.style.backgroundColor = 'yellow'
                 div_resultado_temp.style.borderColor = 'yellow'
-                div_resultado_temp.innerHTML = "Atenção temperatura está em alerta 1"
+                div_resultado_temp.innerHTML = "Atenção!! Temperatura está em alerta."
                 setTimeout(() => sumirMensagem(idDados, dados), 5000);
 
             } else if (registro.dht11_Temperatura >=26.1 && registro.dht11_Temperatura <=26.9) {
@@ -281,7 +282,7 @@
                 div_resultado_temp.style.display = "block"
                 div_resultado_temp.style.backgroundColor = 'yellow'
                 div_resultado_temp.style.borderColor = 'yellow'
-                div_resultado_temp.innerHTML = "Atenção temperatura está em alerta 2"
+                div_resultado_temp.innerHTML = "Atenção!! Temperatura está em alerta."
                 setTimeout(() => sumirMensagem(idDados, dados), 5000);
 
             }
@@ -391,7 +392,7 @@
               div_resultado.style.display = "block"
               div_resultado.style.borderColor = 'red'
               div_resultado.style.backgroundColor = 'red'
-              div_resultado.innerHTML = "Umidade está em estado critico" 
+              div_resultado.innerHTML = "Atencão!! Umidade está em estado crítico." 
 
               setTimeout(() => sumirMensagem(idDados, dados), 5000)
               
@@ -399,7 +400,7 @@
               div_resultado.style.display = "block"
               div_resultado.style.borderColor = 'yellow'
               div_resultado.style.backgroundColor = 'yellow'
-              div_resultado.innerHTML = "Umidade está em estado de alerta 1" 
+              div_resultado.innerHTML = "Atenção!! Umidade está em alerta." 
               // dados.datasets[0].backgroundColor = `yellow`;
               //  dados.datasets[0].borderColor = `yellow`;
       
@@ -409,14 +410,14 @@
               div_resultado.style.display = "block"
               div_resultado.style.borderColor = 'yellow'
               div_resultado.style.backgroundColor = 'yellow'
-              div_resultado.innerHTML = "Umidade está em estado de alerta2" 
+              div_resultado.innerHTML = "Atenção!! Umidade está em alerta." 
               setTimeout(() => sumirMensagem(idDados, dados), 5000)
 
           } else if (novoRegistro[0].dht11_Umidade >= 82.1 && novoRegistro[0].dht11_Umidade <= 83.9 ){
               div_resultado.style.display = "block"
                div_resultado.style.borderColor = 'green'
                div_resultado.style.backgroundColor = 'green'
-               div_resultado.innerHTML = " Umidade está ideal" 
+               div_resultado.innerHTML = "Umidade está ideal" 
                setTimeout(() => sumirMensagem(idDados, dados), 5000)
                ;
           }
@@ -428,7 +429,7 @@
               div_resultado_temp.style.display = "block"
               div_resultado_temp.style.backgroundColor = 'red'
               div_resultado_temp.style.borderColor = 'white'
-              div_resultado_temp.innerHTML = "Atenção temperatura está critica"
+              div_resultado_temp.innerHTML = "Atenção!! Temperatura está crítica."
              
               setTimeout(() => sumirMensagem(idDados, dados), 5000);
                
@@ -436,7 +437,7 @@
               div_resultado_temp.style.display = "block"
               div_resultado_temp.style.backgroundColor = 'yellow'
               div_resultado_temp.style.borderColor = 'yellow'
-              div_resultado_temp.innerHTML = "Atenção temperatura está em alerta 1"
+              div_resultado_temp.innerHTML = "Atenção!! Temperatura está em alerta."
               setTimeout(() => sumirMensagem(idDados, dados), 5000);
 
           } else if (novoRegistro[0].dht11_Temperatura >=26.1 && novoRegistro[0].dht11_Temperatura <=26.9) {
@@ -449,7 +450,7 @@
               div_resultado_temp.style.display = "block"
               div_resultado_temp.style.backgroundColor = 'yellow'
               div_resultado_temp.style.borderColor = 'yellow'
-              div_resultado_temp.innerHTML = "Atenção temperatura está em alerta 2"
+              div_resultado_temp.innerHTML = "Atenção!! Temperatura está em alerta."
               setTimeout(() => sumirMensagem(idDados, dados), 5000);
           }
           
