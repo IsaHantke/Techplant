@@ -78,15 +78,15 @@
         <div class="fazenda1">
 
             <div class="metrica_umid">
-                <div class="critico_umid">Critico<p id="umid_critico">79%</p>
+                <div class="critico_umid">Critico<p id="umid_critico">73%</p>
                 </div>
-                <div class="alerta_umid">Alerta<p id="umid_alerta">80.25%</p>
+                <div class="alerta_umid">Alerta<p id="umid_alerta">74.5%</p>
                 </div>
-                <div class="ideal_umid">Ideal<p id="umid_ideal">82.5%</p>
+                <div class="ideal_umid">Ideal<p id="umid_ideal">75.5%</p>
                 </div>
-                <div class="alerta2_umid">Alerta<p id="umid_alerta2">84.75%</p>
+                <div class="alerta2_umid">Alerta<p id="umid_alerta2">77.1%</p>
                 </div>
-                <div class="critico2_umid">Critico <p id="umid_critico2">86%</p>
+                <div class="critico2_umid">Critico <p id="umid_critico2">78%</p>
                 </div>
 
             </div>
@@ -223,7 +223,7 @@
 
             let cor = ""
 
-            if (registro.dht11_Umidade <= 79.1 || registro.dht11_Umidade >= 86) {
+            if (registro.dht11_Umidade <= 73 || registro.dht11_Umidade >= 78) {
 
                 div_resultado.style.display = "block"
                 div_resultado.style.borderColor = 'red'
@@ -232,7 +232,7 @@
 
                 setTimeout(() => sumirMensagem(idDados, dados), 5000)
 
-            } else if (registro.dht11_Umidade >= 80.1 && registro.dht11_Umidade <= 81.9) {
+            } else if (registro.dht11_Umidade >= 74 && registro.dht11_Umidade <= 74.9) {
                 div_resultado.style.display = "block"
                 div_resultado.style.borderColor = 'yellow'
                 div_resultado.style.backgroundColor = 'yellow'
@@ -242,14 +242,14 @@
 
                 setTimeout(() => sumirMensagem(idDados, dados), 5000)
 
-            } else if (registro.dht11_Umidade >= 84.1 && registro.dht11_Umidade <= 85.9) {
+            } else if (registro.dht11_Umidade >= 77 && registro.dht11_Umidade <= 77.9) {
                 div_resultado.style.display = "block"
                 div_resultado.style.borderColor = 'yellow'
                 div_resultado.style.backgroundColor = 'yellow'
                 div_resultado.innerHTML = "Atenção!! Umidade está em alerta."
                 setTimeout(() => sumirMensagem(idDados, dados), 5000)
 
-            } else if (registro.dht11_Umidade >= 82.1 && registro.dht11_Umidade <= 83.9) {
+            } else if (registro.dht11_Umidade >= 75 && registro.dht11_Umidade <= 76.9) {
                 div_resultado.style.display = "block"
                 div_resultado.style.borderColor = 'green'
                 div_resultado.style.backgroundColor = 'green'
@@ -389,7 +389,7 @@
                     dados.datasets[1].data.shift();  // apagar o primeiro de temperatura
                     dados.datasets[1].data.push(novoRegistro[0].dht11_Temperatura); // incluir uma nova medida de temperatura
 
-                    if (novoRegistro[0].dht11_Umidade <= 79.1 || novoRegistro[0].dht11_Umidade >= 86) {
+                    if (novoRegistro[0].dht11_Umidade <= 73.9 || novoRegistro[0].dht11_Umidade >= 78) {
 
                         div_resultado.style.display = "block"
                         div_resultado.style.borderColor = 'red'
@@ -398,7 +398,7 @@
 
                         setTimeout(() => sumirMensagem(idDados, dados), 5000)
 
-                    } else if (novoRegistro[0].dht11_Umidade >= 80.1 && novoRegistro[0].dht11_Umidade <= 81.9) {
+                    } else if (novoRegistro[0].dht11_Umidade >= 74 && novoRegistro[0].dht11_Umidade <= 74.9) {
                         div_resultado.style.display = "block"
                         div_resultado.style.borderColor = 'yellow'
                         div_resultado.style.backgroundColor = 'yellow'
@@ -408,14 +408,14 @@
 
                         setTimeout(() => sumirMensagem(idDados, dados), 5000)
 
-                    } else if (novoRegistro[0].dht11_Umidade >= 84.1 && novoRegistro[0].dht11_Umidade <= 85.9) {
+                    } else if (novoRegistro[0].dht11_Umidade >= 77 && novoRegistro[0].dht11_Umidade <= 77.9) {
                         div_resultado.style.display = "block"
                         div_resultado.style.borderColor = 'yellow'
                         div_resultado.style.backgroundColor = 'yellow'
                         div_resultado.innerHTML = "Atenção!! Umidade está em alerta."
                         setTimeout(() => sumirMensagem(idDados, dados), 5000)
 
-                    } else if (novoRegistro[0].dht11_Umidade >= 82.1 && novoRegistro[0].dht11_Umidade <= 83.9) {
+                    } else if (novoRegistro[0].dht11_Umidade >= 75 && novoRegistro[0].dht11_Umidade <= 76.9) {
                         div_resultado.style.display = "block"
                         div_resultado.style.borderColor = 'green'
                         div_resultado.style.backgroundColor = 'green'
