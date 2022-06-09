@@ -7,10 +7,11 @@
     <title>DashBoard - TechPlant</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/Chartjs.css'>
+    <link rel="shortcut icon" href="./assets/imgs/logo-preta.png" type="image/x-icon">
     <script src="http://www.chartjs.org/dist/2.7.1/Chart.js"></script>
     <script src="../js/funcoes.js"></script>
     <script src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
-    
+
     <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
 
     <style>
@@ -36,11 +37,11 @@
 
 
 
-       <p class="usuario">Olá,<span id="usuario">usuário!</span></p>
+            <p class="usuario">Olá,<span id="usuario">usuário!</span></p>
 
 
 
-            
+
 
         </div>
     </div>
@@ -55,14 +56,15 @@
                 <h1 class="text1"> Fazenda Tech - <span class="textinho"> Lote 1:</span></h1>
 
                 <h3 class="sensor2">Sensor DHT 11</h3>
-                
+
                 <div class="helpdesk">
-                    
+
                     <button class="btn_helpdesk" onclick="helpdesk()"><a class="texto_help" target="_blank"
-                        href="https://techplant.on.spiceworks.com/portal">Ajuda?</a></button>
-                        <button class="btn_helpdesk" onclick="segunda()"> <a class="texto_help" href="./login.html">Sair</a></button>
-                    </div>
-                    
+                            href="https://techplant.on.spiceworks.com/portal">Ajuda?</a></button>
+                    <button class="btn_helpdesk" onclick="segunda()"> <a class="texto_help"
+                            href="./login.html">Sair</a></button>
+                </div>
+
             </div>
 
 
@@ -127,8 +129,8 @@
         </div>
 
         <div class="analitycs">
-        <div id="div_resultado"></div>
-        <div id="div_resultado_temp"></div>
+            <div id="div_resultado"></div>
+            <div id="div_resultado_temp"></div>
         </div>
 
 
@@ -139,7 +141,7 @@
     </div>
 
     </div>
- 
+
 </body>
 
 </html>
@@ -149,9 +151,9 @@
 
     let proximaAtualizacao;
 
-     window.onload = obterDadosGrafico(1);
+    window.onload = obterDadosGrafico(1);
 
-     usuario.innerHTML = sessionStorage.NOME_USUARIO;
+    usuario.innerHTML = sessionStorage.NOME_USUARIO;
 
 
 
@@ -198,7 +200,7 @@
                     yAxisID: 'y-umidade',
                     label: 'Umidade',
                     borderColor: '#32B9CD',
-                    backgroundColor:'#32B9CD',
+                    backgroundColor: '#32B9CD',
                     fill: false,
                     data: []
                 },
@@ -213,72 +215,72 @@
             ]
         };
 
-            for (i = 0; i < resposta.length; i++) {
+        for (i = 0; i < resposta.length; i++) {
             var registro = resposta[i];
             dados.labels.push(registro.momento_grafico);
             dados.datasets[0].data.push(registro.dht11_Umidade);
             dados.datasets[1].data.push(registro.dht11_Temperatura);
-            
+
             let cor = ""
 
-            if(registro.dht11_Umidade <= 79.1 || registro.dht11_Umidade >= 86) {
-              
+            if (registro.dht11_Umidade <= 79.1 || registro.dht11_Umidade >= 86) {
+
                 div_resultado.style.display = "block"
                 div_resultado.style.borderColor = 'red'
                 div_resultado.style.backgroundColor = 'red'
-                div_resultado.innerHTML = "Atenção!! Umidade está em estado critico" 
+                div_resultado.innerHTML = "Atenção!! Umidade está em estado critico"
 
                 setTimeout(() => sumirMensagem(idDados, dados), 5000)
-                
-            }  else if (registro.dht11_Umidade >= 80.1 && registro.dht11_Umidade <= 81.9 ) {
+
+            } else if (registro.dht11_Umidade >= 80.1 && registro.dht11_Umidade <= 81.9) {
                 div_resultado.style.display = "block"
                 div_resultado.style.borderColor = 'yellow'
                 div_resultado.style.backgroundColor = 'yellow'
-                div_resultado.innerHTML = "Atenção!! Umidade está em alerta." 
+                div_resultado.innerHTML = "Atenção!! Umidade está em alerta."
                 // dados.datasets[0].backgroundColor = `yellow`;
                 //  dados.datasets[0].borderColor = `yellow`;
-        
+
                 setTimeout(() => sumirMensagem(idDados, dados), 5000)
 
             } else if (registro.dht11_Umidade >= 84.1 && registro.dht11_Umidade <= 85.9) {
                 div_resultado.style.display = "block"
                 div_resultado.style.borderColor = 'yellow'
                 div_resultado.style.backgroundColor = 'yellow'
-                div_resultado.innerHTML = "Atenção!! Umidade está em alerta." 
+                div_resultado.innerHTML = "Atenção!! Umidade está em alerta."
                 setTimeout(() => sumirMensagem(idDados, dados), 5000)
 
-            } else if (registro.dht11_Umidade >= 82.1 && registro.dht11_Umidade <= 83.9 ){
+            } else if (registro.dht11_Umidade >= 82.1 && registro.dht11_Umidade <= 83.9) {
                 div_resultado.style.display = "block"
-                 div_resultado.style.borderColor = 'green'
-                 div_resultado.style.backgroundColor = 'green'
-                 div_resultado.innerHTML = " Umidade está ideal" 
-                 setTimeout(() => sumirMensagem(idDados, dados), 5000)
-                 ;
+                div_resultado.style.borderColor = 'green'
+                div_resultado.style.backgroundColor = 'green'
+                div_resultado.innerHTML = " Umidade está ideal"
+                setTimeout(() => sumirMensagem(idDados, dados), 5000)
+                    ;
             }
-                 
-            if (registro.dht11_Temperatura <=21.1 || registro.dht11_Temperatura >= 28) {
+
+            if (registro.dht11_Temperatura <= 21.1 || registro.dht11_Temperatura >= 28) {
 
                 div_resultado_temp.style.display = "block"
                 div_resultado_temp.style.backgroundColor = 'red'
                 div_resultado_temp.style.borderColor = 'white'
                 div_resultado_temp.innerHTML = "Atenção!! Temperatura está crítica."
-               
+
                 setTimeout(() => sumirMensagem(idDados, dados), 5000);
-                 
-            } else if(registro.dht11_Temperatura >=23 && registro.dht11_Temperatura <= 25.9) {
+
+            } else if (registro.dht11_Temperatura >= 23 && registro.dht11_Temperatura <= 25.9) {
                 div_resultado_temp.style.display = "block"
                 div_resultado_temp.style.backgroundColor = 'yellow'
                 div_resultado_temp.style.borderColor = 'yellow'
                 div_resultado_temp.innerHTML = "Atenção!! Temperatura está em alerta."
                 setTimeout(() => sumirMensagem(idDados, dados), 5000);
 
-            } else if (registro.dht11_Temperatura >=26.1 && registro.dht11_Temperatura <=26.9) {
+            } else if (registro.dht11_Temperatura >= 26.1 && registro.dht11_Temperatura <= 26.9) {
                 div_resultado_temp.style.display = "block"
                 div_resultado_temp.style.backgroundColor = 'green'
                 div_resultado_temp.style.borderColor = 'green'
                 div_resultado_temp.innerHTML = "Temperatura está ideal"
                 setTimeout(() => sumirMensagem(idDados, dados), 5000);
-            } else if(registro.dht11_Temperatura >= 27 && registro.dht11_Temperatura <= 27.9 ){
+            } else if (registro.dht11_Temperatura >= 27 && registro.dht11_Temperatura <= 27.9) {
                 div_resultado_temp.style.display = "block"
                 div_resultado_temp.style.backgroundColor = 'yellow'
                 div_resultado_temp.style.borderColor = 'yellow'
@@ -286,20 +288,20 @@
                 setTimeout(() => sumirMensagem(idDados, dados), 5000);
 
             }
-            
-            
-                  function sumirMensagem() {
-               div_resultado.style.display = "none"
-               div_resultado_temp.style.display = "none"
-             }
+
+
+            function sumirMensagem() {
+                div_resultado.style.display = "none"
+                div_resultado_temp.style.display = "none"
+            }
             //     if (registro.dht11_Umidade >= 70) {
             //         cor = 'red';
             //     } 
             //     dados.datasets[0].backgroundColor.push(cor);
-                     
+
             //     if(registro.dht11_Temperatura ==  26) {
             //         cor = 'green'
-                 
+
             //     } else if(registro.dht11_Temperatura > 25){
 
             //         cor = 'yellow';
@@ -307,7 +309,7 @@
 
             //     dados.datasets[1].backgroundColor.push(cor);
             // 
-            }
+        }
 
         console.log(JSON.stringify(dados));
         var ctx = dht11Umidade.getContext('2d')
@@ -376,84 +378,84 @@
                     dados.labels.shift(); // apagar o primeiro
                     dados.labels.push(novoRegistro[0].momento_grafico); // incluir um novo momento
 
-                      console.log('passei aq') 
-                         
-            
+                    console.log('passei aq')
+
+
 
                     dados.datasets[0].data.shift();  // apagar o primeiro de umidade
                     dados.datasets[0].data.push(novoRegistro[0].dht11_Umidade); // incluir uma nova medida de umidade
-                        
+
 
                     dados.datasets[1].data.shift();  // apagar o primeiro de temperatura
                     dados.datasets[1].data.push(novoRegistro[0].dht11_Temperatura); // incluir uma nova medida de temperatura
-                        
-                    if(novoRegistro[0].dht11_Umidade <= 79.1 || novoRegistro[0].dht11_Umidade >= 86) {
-              
-              div_resultado.style.display = "block"
-              div_resultado.style.borderColor = 'red'
-              div_resultado.style.backgroundColor = 'red'
-              div_resultado.innerHTML = "Atencão!! Umidade está em estado crítico." 
 
-              setTimeout(() => sumirMensagem(idDados, dados), 5000)
-              
-          }  else if (novoRegistro[0].dht11_Umidade >= 80.1 && novoRegistro[0].dht11_Umidade <= 81.9 ) {
-              div_resultado.style.display = "block"
-              div_resultado.style.borderColor = 'yellow'
-              div_resultado.style.backgroundColor = 'yellow'
-              div_resultado.innerHTML = "Atenção!! Umidade está em alerta." 
-              // dados.datasets[0].backgroundColor = `yellow`;
-              //  dados.datasets[0].borderColor = `yellow`;
-      
-              setTimeout(() => sumirMensagem(idDados, dados), 5000)
+                    if (novoRegistro[0].dht11_Umidade <= 79.1 || novoRegistro[0].dht11_Umidade >= 86) {
 
-          } else if (novoRegistro[0].dht11_Umidade >= 84.1 && novoRegistro[0].dht11_Umidade <= 85.9) {
-              div_resultado.style.display = "block"
-              div_resultado.style.borderColor = 'yellow'
-              div_resultado.style.backgroundColor = 'yellow'
-              div_resultado.innerHTML = "Atenção!! Umidade está em alerta." 
-              setTimeout(() => sumirMensagem(idDados, dados), 5000)
+                        div_resultado.style.display = "block"
+                        div_resultado.style.borderColor = 'red'
+                        div_resultado.style.backgroundColor = 'red'
+                        div_resultado.innerHTML = "Atencão!! Umidade está em estado crítico."
 
-          } else if (novoRegistro[0].dht11_Umidade >= 82.1 && novoRegistro[0].dht11_Umidade <= 83.9 ){
-              div_resultado.style.display = "block"
-               div_resultado.style.borderColor = 'green'
-               div_resultado.style.backgroundColor = 'green'
-               div_resultado.innerHTML = "Umidade está ideal" 
-               setTimeout(() => sumirMensagem(idDados, dados), 5000)
-               ;
-          }
-              
-               //   Alertas de temperatura
+                        setTimeout(() => sumirMensagem(idDados, dados), 5000)
 
-          if (novoRegistro[0].dht11_Temperatura <=21.1 || novoRegistro[0].dht11_Temperatura >= 28) {
+                    } else if (novoRegistro[0].dht11_Umidade >= 80.1 && novoRegistro[0].dht11_Umidade <= 81.9) {
+                        div_resultado.style.display = "block"
+                        div_resultado.style.borderColor = 'yellow'
+                        div_resultado.style.backgroundColor = 'yellow'
+                        div_resultado.innerHTML = "Atenção!! Umidade está em alerta."
+                        // dados.datasets[0].backgroundColor = `yellow`;
+                        //  dados.datasets[0].borderColor = `yellow`;
 
-              div_resultado_temp.style.display = "block"
-              div_resultado_temp.style.backgroundColor = 'red'
-              div_resultado_temp.style.borderColor = 'white'
-              div_resultado_temp.innerHTML = "Atenção!! Temperatura está crítica."
-             
-              setTimeout(() => sumirMensagem(idDados, dados), 5000);
-               
-          } else if(novoRegistro[0].dht11_Temperatura >=23 && novoRegistro[0].dht11_Temperatura <= 25.9) {
-              div_resultado_temp.style.display = "block"
-              div_resultado_temp.style.backgroundColor = 'yellow'
-              div_resultado_temp.style.borderColor = 'yellow'
-              div_resultado_temp.innerHTML = "Atenção!! Temperatura está em alerta."
-              setTimeout(() => sumirMensagem(idDados, dados), 5000);
+                        setTimeout(() => sumirMensagem(idDados, dados), 5000)
 
-          } else if (novoRegistro[0].dht11_Temperatura >=26.1 && novoRegistro[0].dht11_Temperatura <=26.9) {
-              div_resultado_temp.style.display = "block"
-              div_resultado_temp.style.backgroundColor = 'green'
-              div_resultado_temp.style.borderColor = 'green'
-              div_resultado_temp.innerHTML = "Temperatura está ideal"
-              setTimeout(() => sumirMensagem(idDados, dados), 5000);
-          } else if(novoRegistro[0].dht11_Temperatura >= 27 && novoRegistro[0].dht11_Temperatura <= 27.9 ){
-              div_resultado_temp.style.display = "block"
-              div_resultado_temp.style.backgroundColor = 'yellow'
-              div_resultado_temp.style.borderColor = 'yellow'
-              div_resultado_temp.innerHTML = "Atenção!! Temperatura está em alerta."
-              setTimeout(() => sumirMensagem(idDados, dados), 5000);
-          }
-          
+                    } else if (novoRegistro[0].dht11_Umidade >= 84.1 && novoRegistro[0].dht11_Umidade <= 85.9) {
+                        div_resultado.style.display = "block"
+                        div_resultado.style.borderColor = 'yellow'
+                        div_resultado.style.backgroundColor = 'yellow'
+                        div_resultado.innerHTML = "Atenção!! Umidade está em alerta."
+                        setTimeout(() => sumirMensagem(idDados, dados), 5000)
+
+                    } else if (novoRegistro[0].dht11_Umidade >= 82.1 && novoRegistro[0].dht11_Umidade <= 83.9) {
+                        div_resultado.style.display = "block"
+                        div_resultado.style.borderColor = 'green'
+                        div_resultado.style.backgroundColor = 'green'
+                        div_resultado.innerHTML = "Umidade está ideal"
+                        setTimeout(() => sumirMensagem(idDados, dados), 5000)
+                            ;
+                    }
+
+                    //   Alertas de temperatura
+
+                    if (novoRegistro[0].dht11_Temperatura <= 21.1 || novoRegistro[0].dht11_Temperatura >= 28) {
+
+                        div_resultado_temp.style.display = "block"
+                        div_resultado_temp.style.backgroundColor = 'red'
+                        div_resultado_temp.style.borderColor = 'white'
+                        div_resultado_temp.innerHTML = "Atenção!! Temperatura está crítica."
+
+                        setTimeout(() => sumirMensagem(idDados, dados), 5000);
+
+                    } else if (novoRegistro[0].dht11_Temperatura >= 23 && novoRegistro[0].dht11_Temperatura <= 25.9) {
+                        div_resultado_temp.style.display = "block"
+                        div_resultado_temp.style.backgroundColor = 'yellow'
+                        div_resultado_temp.style.borderColor = 'yellow'
+                        div_resultado_temp.innerHTML = "Atenção!! Temperatura está em alerta."
+                        setTimeout(() => sumirMensagem(idDados, dados), 5000);
+
+                    } else if (novoRegistro[0].dht11_Temperatura >= 26.1 && novoRegistro[0].dht11_Temperatura <= 26.9) {
+                        div_resultado_temp.style.display = "block"
+                        div_resultado_temp.style.backgroundColor = 'green'
+                        div_resultado_temp.style.borderColor = 'green'
+                        div_resultado_temp.innerHTML = "Temperatura está ideal"
+                        setTimeout(() => sumirMensagem(idDados, dados), 5000);
+                    } else if (novoRegistro[0].dht11_Temperatura >= 27 && novoRegistro[0].dht11_Temperatura <= 27.9) {
+                        div_resultado_temp.style.display = "block"
+                        div_resultado_temp.style.backgroundColor = 'yellow'
+                        div_resultado_temp.style.borderColor = 'yellow'
+                        div_resultado_temp.innerHTML = "Atenção!! Temperatura está em alerta."
+                        setTimeout(() => sumirMensagem(idDados, dados), 5000);
+                    }
+
 
 
                     window.grafico_linha.update();
@@ -470,8 +472,8 @@
             .catch(function (error) {
                 console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
             });
-  
-        }
+
+    }
 
 
 </script>

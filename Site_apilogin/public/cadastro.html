@@ -1,85 +1,89 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-
     <title>Cadastro - Techplant</title>
-
-    
+    <link rel="shortcut icon" href="./assets/imgs/logo-preta.png" type="image/x-icon">
     <link rel='stylesheet' type='text/css' media='screen' href='css/cadastro.css'>
     <script src='main.js'></script>
     <script src="./js/funcoes.js"></script>
 </head>
 
 <body>
-      <!-- Início Header-->
-    <div class="header"> 
-        
+    <!-- Início Header-->
+    <div class="header">
+
         <div class="div_logobranca"> <img class="img1" src="assets/imgs/logo-branca.png"> </div>
-           
+
         <h1 class="titulo"> TechPlant </h1>
 
-        <div class="container"> 
+        <div class="container">
 
-            
-       
+
+
             <ul class="navbar">
-             <li> <a href="index.html" class="homecad"> Home </a> </li>
-             <li> <a href="index.html" class="projetocad"> Projeto </a> </li>
-             <li> <a href="index.html" class="sobrecad"> Sobre Nós </a> </li>
-             <li> <a href="SimuladorFinanceiro.html" class="cadsimulador"> Simulador Financeiro </a> </li>
-             <li> <a href="index.html" class="contatocad"> Contato </a> </li>
-            
-             <div class="login"> <li> <a class="reflogin" href="login.html"> Login </a> </li> </div> 
-             
-             <div class="cadastro"> <li> Cadastro  </li> </div>
-        </ul>
-        
+                <li> <a href="index.html" class="homecad"> Home </a> </li>
+                <li> <a href="index.html" class="projetocad"> Projeto </a> </li>
+                <li> <a href="index.html" class="sobrecad"> Sobre Nós </a> </li>
+                <li> <a href="SimuladorFinanceiro.html" class="cadsimulador"> Simulador Financeiro </a> </li>
+                <li> <a href="index.html" class="contatocad"> Contato </a> </li>
+
+                <div class="login">
+                    <li> <a class="reflogin" href="login.html"> Login </a> </li>
+                </div>
+
+                <div class="cadastro">
+                    <li> Cadastro </li>
+                </div>
+            </ul>
+
         </div>
     </div>
     <!-- Fim Header -->
 
-    <div class="cadastroback"> 
+    <div class="cadastroback">
 
-        <div class="cadastrobanner"> 
+        <div class="cadastrobanner">
 
             <div class="cadastroimg">
                 <img class="imgcadastro1" src="assets/imgs/imglogin1.png">
             </div>
-            
+
 
             <div class="partecadastro">
 
                 <div class="logocadastro">
 
                     <img src="assets/imgs/logo-preta.png" class="cadastrologo">
-    
-                <span class="cadastrotext"> TechPlant </span>
 
-                                                             <div id="div_resultado"> 
-                                                                                 </div>
+                    <span class="cadastrotext"> TechPlant </span>
+
+                    <div id="div_resultado">
+                    </div>
 
                 </div>
 
                 <div class="cadastrotudo">
-                    
+
                     <div class="partido1">
-                       
+
                         <span class="nome1"> Nome Completo </span>
                         <input class="inputnome" id="nome_completo" placeholder="Nome Completo">
-                        <span class="telefone"> Número de telefone </span> 
-                        <input class="numero1" id="numero_telef" placeholder="(00) 00000-0000">
+                        <span class="telefone"> Número de telefone </span>
+                        <input class="numero1" id="numero_telef" placeholder="(00) 00000-0000" maxlength="11">
                         <span class="senha2"> Senha </span>
                         <input class="cadsenha" id="in_senha" placeholder="Inserir Senha" type="password">
                     </div>
 
                     <div class="partido2">
-                       
+
                         <span class="nome1"> Empresa </span>
-                        <input class="inputnome" id="nome_empresa" placeholder="Empresa">  <!-- Este campo não é obrigatório-->
-                        <span class="telefone"> E-mail </span> 
+                        <input class="inputnome" id="nome_empresa" placeholder="Empresa">
+                        <!-- Este campo não é obrigatório-->
+                        <span class="telefone"> E-mail </span>
                         <input class="numero1" id="in_email" placeholder="Example@gmail.com">
                         <span class="senha2"> Confirmar Senha </span>
                         <input class="cadsenha" id="confirmar_senha" placeholder="Inserir Senha" type="password">
@@ -89,55 +93,56 @@
 
                 <div class="embaixo">
 
-                     <div class="parte1">
-                          
+                    <div class="parte1">
+
                         <div class="primeirocheck">
-                     <input class="check1" type="checkbox"> 
-                     <span class="textcheck1"> Aceito receber email da Plantech</span>
-                    </div>
-                        
-                    <div class="segundocheck">
-                        <input class="check2" type="checkbox"> 
-                        <span class="textcheck2"> Li e aceito os <i style="color: blue;"> Termos e condições </i></span>
-                     </div>
-                     
+                            <input class="check1" type="checkbox">
+                            <span class="textcheck1"> Aceito receber email da Plantech</span>
+                        </div>
+
+                        <div class="segundocheck">
+                            <input class="check2" type="checkbox">
+                            <span class="textcheck2"> Li e aceito os <i style="color: blue;"> Termos e condições
+                                </i></span>
+                        </div>
+
 
                     </div>
-                
+
                     <div class="parte2">
 
-                         
-                    <button class="criar" onclick="criar()"> Criar conta</button>
+
+                        <button class="criar" onclick="criar()"> Criar conta</button>
                     </div>
 
                 </div>
 
-              <div class="embaixo4">
+                <div class="embaixo4">
 
-                   Já possui uma conta? <a href="login.html" class="refflogin"> Login </a>
+                    Já possui uma conta? <a href="login.html" class="refflogin"> Login </a>
 
-              </div>
+                </div>
 
 
 
             </div>
-        
 
 
 
-            
+
+
 
         </div>
 
     </div>
-      
-    <div class="rodape"> 
-              
+
+    <div class="rodape">
+
         <div class="rodape1">
 
-           Rua Imirim, nº35 Vila Guilherme | São Paulo | SP | CEP 02467-965 <br> <br>
-           TechPlant SA | CNP Mande um email J: 83.864.853.0001-17 <br> <br>
-           Copyright© 2020 - 2022 TechPlant Company S.L. Todos direitos reservados. 
+            Rua Imirim, nº35 Vila Guilherme | São Paulo | SP | CEP 02467-965 <br> <br>
+            TechPlant SA | CNP Mande um email J: 83.864.853.0001-17 <br> <br>
+            Copyright© 2020 - 2022 TechPlant Company S.L. Todos direitos reservados.
 
         </div>
 
@@ -145,66 +150,76 @@
             <img class="imgrodape" src="assets/imgs/rodape1.png">
         </div>
 
-       <div class="rodape3">
-           <b> Atalhos</b> <br> <br>
-           Projeto <br> <br>
-           Contato <br>
+        <div class="rodape3">
+            <b> Atalhos</b> <br> <br>
+            Projeto <br> <br>
+            Contato <br>
 
-       </div>
- 
+        </div>
 
-       <div class="rodape4">
-          <b>Dúvidas</b> <br> <br>
-          Mande um email <br> <br>
-          Quem Somos
-       </div>
 
-</div>
+        <div class="rodape4">
+            <b>Dúvidas</b> <br> <br>
+            Mande um email <br> <br>
+            Quem Somos
+        </div>
 
-    </body>
+    </div>
+
+</body>
+
 </html>
 
 
-<script>
-    
-    function  criar(){
-    var nomeVar = nome_completo.value
-    var telefVar = numero_telef.value
-    var senhaVar = in_senha.value
-    var empresaVar = nome_empresa.value 
-    var emailVar = in_email.value
-    var confirmarVar = confirmar_senha.value 
-      
+<script>  
 
- if (nomeVar == "" || telefVar == "" || senhaVar == "" || empresaVar == "" || emailVar == "" || confirmarVar == "") {
-     
-    div_resultado.style.display = "block" 
-    div_resultado.innerHTML = (`Para prosseguir preencher  todos os campos!`) 
-    
-     return false
- } else {
-    div_resultado.style.display = "block" 
-        div_resultado.innerHTML = (`Cadastro realizado com sucesso. Bem-vindo`)
- }
 
-    if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
+    function criar() {
+        var nomeVar = nome_completo.value
+        var telefVar = numero_telef.value
+        var senhaVar = in_senha.value
+        var empresaVar = nome_empresa.value
+        var emailVar = in_email.value
+        var confirmarVar = confirmar_senha.value
+        var length = telefVar.length
     
-    div_resultado.style.display = "block" 
-    div_resultado.innerHTML = (`E-mail inválido! Verifique e tente novamente.`)                                         
-    
-    return false
+        if (nomeVar == "" || telefVar == "" || senhaVar == "" || empresaVar == "" || emailVar == "" || confirmarVar == "") {
+
+            div_resultado.style.display = "block"
+            div_resultado.innerHTML = (`Para prosseguir preencher  todos os campos!`)
+
+            return false
+        } else {
+            div_resultado.style.display = "block"
+            div_resultado.innerHTML = (`Cadastro realizado com sucesso. Bem-vindo`) 
+        }
+             
+
+        if (emailVar.indexOf("@") == -1 || emailVar.indexOf(".com") == -1) {
+
+            div_resultado.style.display = "block"
+            div_resultado.innerHTML = (`E-mail inválido! Verifique e tente novamente.`)
+
+            return false
+        }
+
+        if (senhaVar != confirmarVar) {
+
+            div_resultado.style.display = "block"
+            div_resultado.innerHTML = (`As senhas devem ser iguais para prosseguir!`)
+
+            return false
+
+        } 
+
+        if (length <11) {
+
+            div_resultado.innerHTML = (`O número inválido! Verifique e tente novamente.`)  
+            // div_resultado.style.display = "none"
+       return false
 }   
- 
-   if (senhaVar != confirmarVar) {
-
-    div_resultado.style.display = "block" 
-    div_resultado.innerHTML = (`As senhas devem ser iguais para prosseguir!`)
-
-    return false
-
-   } 
- // Enviando o valor da nova input
- fetch("/usuarios/cadastrar", {
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -228,10 +243,10 @@
 
                 setTimeout(() => {
                     window.location = "login.html";
-                }, "1000")                
+                }, "1000")
                 limparFormulario();
                 finalizarAguardar();
-                return false 
+                return false
             } else {
                 throw ("Houve um erro ao tentar realizar o cadastro!");
             }
@@ -243,7 +258,6 @@
         return false;
     }
 
-    
+
 
 </script>
-
