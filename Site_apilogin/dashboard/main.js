@@ -11,8 +11,8 @@ const HABILITAR_OPERACAO_INSERIR = true;
 // const AMBIENTE = 'desenvolvimento';
 
 // escolha deixar a linha 'producao' descomentada se quiser conectar seu arduino ao banco de dados remoto, SQL Server
-// const AMBIENTE = 'producao';
-const AMBIENTE = 'desenvolvimento';
+const AMBIENTE = 'producao';
+// const AMBIENTE = 'desenvolvimento';
 
 const serial = async (
     valoresDht11Umidade,
